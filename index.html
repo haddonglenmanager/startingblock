@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haddon Glen Swim Club | Home of the Gators</title>
+    <title>The Starting Block | Haddon Glen Swim Club</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -12,23 +12,22 @@
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#11355E',       /* Deep Navy Blue from "WELCOMING NEW MEMBERS" */
-                            blue: '#20639B',       /* Royal Blue from "HADDON GLEN" */
-                            sky: '#54B2E5',        /* Sky Blue from "SWIM CLUB" */
-                            lightbg: '#F0F9FF',    /* Soft Water Ice Blue background */
-                            accent: '#F59E0B',     /* Sun Gold highlight */
-                            darknavy: '#0B223C'    /* Ultra deep footer blue */
+                            navy: '#11355E',       /* Deep Navy Blue from logo text */
+                            royal: '#20639B',      /* Royal Blue from logo text */
+                            sky: '#54B2E5',        /* Sky Blue from logo text */
+                            icebg: '#F0F9FF',      /* Crisp Water Ice Background */
+                            slatebg: '#F8FAFC'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Bitter', 'serif'],
+                        slab: ['Bitter', 'serif'],
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Bitter for slab serif styling, Inter for clean body typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,40 +37,26 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        .slab-logo-title {
-            font-family: 'Bitter', serif;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-        .slab-logo-sub {
-            font-family: 'Bitter', serif;
-            font-weight: 400;
-            letter-spacing: 0.35em;
-        }
-        .slab-heading {
+        .font-logo {
             font-family: 'Bitter', serif;
         }
         .water-gradient {
             background: linear-gradient(135deg, #11355E 0%, #20639B 100%);
-        }
-        .blue-glow {
-            box-shadow: 0 4px 20px -2px rgba(84, 178, 229, 0.4);
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
 
     <!-- Top Info Bar -->
-    <div class="bg-brand-dark text-white text-xs py-2 px-4 flex flex-wrap justify-between items-center border-b border-brand-blue/30">
+    <div class="bg-brand-navy text-white text-xs py-2 px-4 flex flex-wrap justify-between items-center border-b border-brand-royal/30">
         <div class="flex items-center gap-4 mx-auto md:mx-0">
             <span><i class="fa-solid fa-location-dot text-brand-sky mr-1.5"></i> 1701 Walnut Ave, Haddon Heights, NJ 08035</span>
-            <span class="hidden md:inline text-brand-sky/40">|</span>
+            <span class="hidden md:inline">|</span>
             <span><i class="fa-solid fa-phone text-brand-sky mr-1.5"></i> (856) 546-9257</span>
         </div>
         <div class="hidden md:flex items-center gap-4">
-            <span class="bg-brand-sky/20 text-brand-sky px-2.5 py-0.5 rounded-full font-bold text-[10px] uppercase border border-brand-sky/30">2026 Tri-County Host Pool</span>
-            <a href="https://www.gomotionapp.com/team/rechgsdt/page/home" target="_blank" class="hover:text-brand-sky transition duration-200">GoMotion Portal</a>
-            <a href="https://swimstop.pro/teams/haddon-glen-swim-team/" target="_blank" class="hover:text-brand-sky transition duration-200">Gators Team Store</a>
+            <a href="#quick-links" class="hover:text-brand-sky transition duration-200">GoMotion Portal</a>
+            <a href="https://swimstop.pro/" target="_blank" class="hover:text-brand-sky transition duration-200">Team Apparel Store</a>
         </div>
     </div>
 
@@ -81,15 +66,14 @@
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <a href="#" class="flex items-center gap-3 group">
-                        <!-- Water Drop Shield concept with new colors -->
-                        <div class="w-12 h-12 rounded-xl bg-brand-dark flex items-center justify-center text-white font-bold text-2xl shadow-md border-2 border-brand-sky group-hover:scale-105 transition-all duration-300">
-                            <i class="fa-solid fa-water text-brand-sky"></i>
+                        <!-- Seahorse Styled Emblem Concept -->
+                        <div class="w-12 h-12 rounded-xl bg-brand-royal flex items-center justify-center text-white font-bold text-2xl shadow-md border-2 border-brand-sky group-hover:scale-105 transition-all duration-300">
+                            <i class="fa-solid fa-shrimp text-brand-icebg"></i>
                         </div>
-                        <div class="flex flex-col">
-                            <!-- Typography styling inspired by image_d914a9.png -->
-                            <span class="text-xl font-extrabold tracking-tight text-brand-blue slab-logo-title leading-tight">HADDON GLEN</span>
-                            <span class="text-[10px] font-semibold text-brand-sky tracking-[0.22em] uppercase block -mt-0.5 flex items-center gap-1">
-                                SWIM CLUB
+                        <div>
+                            <span class="text-xl font-black tracking-tight text-brand-royal font-logo block">HADDON GLEN</span>
+                            <span class="text-xs font-bold text-brand-sky tracking-widest uppercase block -mt-1 flex items-center gap-1">
+                                <i class="fa-solid fa-water text-[10px]"></i> Seahorses Swim Club
                             </span>
                         </div>
                     </a>
@@ -97,20 +81,20 @@
 
                 <!-- Desktop Nav -->
                 <div class="hidden lg:flex items-center space-x-6">
-                    <a href="#dashboard" class="font-medium text-slate-600 hover:text-brand-blue transition duration-150">Status</a>
-                    <a href="#quick-links" class="font-medium text-slate-600 hover:text-brand-blue transition duration-150">Quick Links</a>
-                    <a href="#calculator" class="font-medium text-slate-600 hover:text-brand-blue transition duration-150">Dues Calculator</a>
-                    <a href="#schedule" class="font-medium text-slate-600 hover:text-brand-blue transition duration-150">Schedules</a>
-                    <a href="#rules" class="font-medium text-slate-600 hover:text-brand-blue transition duration-150">Pool Rules</a>
-                    <a href="#contact" class="font-medium text-slate-600 hover:text-brand-blue transition duration-150">Contact</a>
-                    <a href="#quick-links" class="bg-brand-blue text-white hover:bg-brand-dark px-5 py-2.5 rounded-xl font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-0.5 text-sm flex items-center gap-2">
+                    <a href="#dashboard" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">Status</a>
+                    <a href="#quick-links" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">Quick Links</a>
+                    <a href="#calculator" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">Dues Calculator</a>
+                    <a href="#schedule" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">Schedules</a>
+                    <a href="#rules" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">Pool Rules</a>
+                    <a href="#contact" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">Contact</a>
+                    <a href="#quick-links" class="bg-brand-royal text-white hover:bg-brand-navy px-5 py-2.5 rounded-xl font-semibold shadow-md transition-all duration-300 transform hover:-translate-y-0.5 text-sm flex items-center gap-2">
                         <i class="fa-solid fa-user-plus text-xs"></i> Register Online
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="flex items-center lg:hidden">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-blue focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-royal focus:outline-none p-2 rounded-lg hover:bg-slate-100 transition">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -119,46 +103,37 @@
 
         <!-- Mobile Nav Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3 shadow-inner">
-            <a href="#dashboard" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-lightbg hover:text-brand-blue font-medium transition">Live Status</a>
-            <a href="#quick-links" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-lightbg hover:text-brand-blue font-medium transition">Quick Links Hub</a>
-            <a href="#calculator" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-lightbg hover:text-brand-blue font-medium transition">Dues Calculator</a>
-            <a href="#schedule" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-lightbg hover:text-brand-blue font-medium transition">Hours & Calendars</a>
-            <a href="#rules" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-lightbg hover:text-brand-blue font-medium transition">Pool Rules & Bylaws</a>
-            <a href="#contact" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-lightbg hover:text-brand-blue font-medium transition">Contact Us</a>
-            <a href="#quick-links" class="block text-center bg-brand-blue text-white py-3 rounded-xl font-bold shadow transition hover:bg-brand-dark">
+            <a href="#dashboard" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">Live Status</a>
+            <a href="#quick-links" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">Quick Links Hub</a>
+            <a href="#calculator" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">Dues Calculator</a>
+            <a href="#schedule" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">Hours & Calendars</a>
+            <a href="#rules" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">Pool Rules & Bylaws</a>
+            <a href="#contact" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">Contact Us</a>
+            <a href="#quick-links" class="block text-center bg-brand-royal text-white py-3 rounded-xl font-bold shadow transition hover:bg-brand-navy">
                 <i class="fa-solid fa-user-plus mr-2"></i> Register Online
             </a>
         </div>
     </nav>
 
-    <!-- Hero Header -->
-    <header class="relative overflow-hidden text-white water-gradient py-12 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 border-b-4 border-brand-sky">
+    <!-- Hero Header: The Starting Block -->
+    <header class="relative overflow-hidden text-white water-gradient py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-b-4 border-brand-sky">
         <!-- Abstract Water Pattern Overlay -->
         <div class="absolute inset-0 opacity-10 mix-blend-overlay bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1200&auto=format&fit=crop');"></div>
         <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-brand-sky opacity-20 blur-3xl"></div>
-        <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-brand-blue opacity-20 blur-3xl"></div>
+        <div class="absolute -left-20 -top-20 w-80 h-80 rounded-full bg-blue-400 opacity-10 blur-3xl"></div>
 
         <div class="relative max-w-5xl mx-auto text-center">
-            <!-- Alert Badge with sky-blue coloring matching image_d914a9.png -->
-            <div class="inline-flex items-center gap-2 bg-brand-sky/20 backdrop-blur-md text-brand-sky px-4 py-2 rounded-full border border-brand-sky/30 mb-6 font-semibold text-sm animate-bounce">
-                <span class="flex h-2.5 w-2.5 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-sky opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-sky"></span>
-                </span>
-                HG Proudly Hosts 2026 Tri-County Championships!
-            </div>
-
-            <!-- Title in Bitter Font to match image_d914a9.png -->
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 slab-heading">
-                Haddon Glen Swim Club
+            <!-- Title -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black font-logo tracking-tight mb-4">
+                The Starting Block
             </h1>
-            <p class="text-lg md:text-xl text-sky-100 max-w-3xl mx-auto leading-relaxed mb-8 font-light">
-                Your community hub in Haddon Heights, NJ. Offering a pristine 25-meter pool, specialized diving well, cozy kiddie pool, tennis/pickleball courts, and the competitive <span class="text-brand-sky font-semibold underline decoration-2 decoration-brand-sky">Haddon Glen Gators</span> Swim & Dive Team!
+            <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed mb-8 font-light">
+                Welcome to Haddon Glen Swim Club, home of the <span class="text-brand-sky font-bold">Seahorses</span>! Serving our local community with an exceptional 25-meter pool, specialized diving well, safe kiddie pool, tennis/pickleball courts, and competitive swimming programs.
             </p>
 
             <!-- Main CTA Buttons -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#quick-links" class="w-full sm:w-auto px-8 py-4 bg-brand-sky hover:bg-sky-400 text-brand-dark font-extrabold text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3 blue-glow">
+                <a href="#quick-links" class="w-full sm:w-auto px-8 py-4 bg-brand-sky hover:bg-sky-400 text-brand-navy font-extrabold text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3">
                     <i class="fa-solid fa-list-check"></i> Frequently Needed Items
                 </a>
                 <a href="#calculator" class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold text-base rounded-xl border border-white/30 backdrop-blur-sm transition-all duration-300 flex items-center justify-center gap-3">
@@ -170,19 +145,19 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-14 pt-8 border-t border-white/10">
                 <div class="bg-white/5 rounded-xl p-3 border border-white/5 backdrop-blur-sm">
                     <span class="block text-2xl font-bold text-brand-sky">25M</span>
-                    <span class="text-xs text-sky-100 uppercase tracking-wider font-semibold">Competitive Pool</span>
+                    <span class="text-xs text-blue-100 uppercase tracking-wider font-semibold">Competitive Pool</span>
                 </div>
                 <div class="bg-white/5 rounded-xl p-3 border border-white/5 backdrop-blur-sm">
-                    <span class="block text-2xl font-bold text-brand-sky">Gators</span>
-                    <span class="text-xs text-sky-100 uppercase tracking-wider font-semibold">Swim & Dive Team</span>
+                    <span class="block text-2xl font-bold text-brand-sky">Seahorses</span>
+                    <span class="text-xs text-blue-100 uppercase tracking-wider font-semibold">Swim & Dive Team</span>
                 </div>
                 <div class="bg-white/5 rounded-xl p-3 border border-white/5 backdrop-blur-sm">
                     <span class="block text-2xl font-bold text-brand-sky">Active</span>
-                    <span class="text-xs text-sky-100 uppercase tracking-wider font-semibold">Social Calendar</span>
+                    <span class="text-xs text-blue-100 uppercase tracking-wider font-semibold">Social Calendar</span>
                 </div>
                 <div class="bg-white/5 rounded-xl p-3 border border-white/5 backdrop-blur-sm">
-                    <span class="block text-2xl font-bold text-brand-sky">Est. 1951</span>
-                    <span class="text-xs text-sky-100 uppercase tracking-wider font-semibold">HG Community</span>
+                    <span class="block text-2xl font-bold text-brand-sky">Est. 1961</span>
+                    <span class="text-xs text-blue-100 uppercase tracking-wider font-semibold">HG History</span>
                 </div>
             </div>
         </div>
@@ -193,32 +168,32 @@
         <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             <!-- Pool Status -->
             <div class="flex items-center gap-4">
-                <div id="status-icon-bg" class="w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm transition-all duration-500 bg-brand-blue">
-                    <i id="status-icon" class="fa-solid fa-water-ladder animate-pulse text-brand-sky"></i>
+                <div id="status-icon-bg" class="w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm transition-all duration-500 bg-emerald-600">
+                    <i id="status-icon" class="fa-solid fa-water-ladder animate-pulse"></i>
                 </div>
                 <div>
                     <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider block">Pool Status</span>
                     <div class="flex items-center gap-2">
-                        <span id="status-text" class="text-lg font-bold text-brand-blue">Open Today</span>
+                        <span id="status-text" class="text-lg font-bold text-emerald-600">Open Today</span>
                         <span class="flex h-2 w-2 relative">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-sky"></span>
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                         </span>
                     </div>
                     <span id="status-hours" class="text-xs text-slate-500 block">Standard Hours: 11:00 AM - 8:00 PM</span>
                 </div>
             </div>
 
-            <!-- Simulated Weather Tracker -->
+            <!-- Weather Tracker -->
             <div class="flex items-center gap-4 border-t md:border-t-0 md:border-x border-slate-100 pt-4 md:pt-0 md:px-6">
-                <div class="w-14 h-14 bg-sky-50 rounded-xl flex items-center justify-center text-brand-blue text-2xl border border-sky-100 shadow-sm">
-                    <i class="fa-solid fa-sun text-amber-500 animate-spin-slow"></i>
+                <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-brand-royal text-2xl border border-blue-100 shadow-sm">
+                    <i class="fa-solid fa-sun text-amber-500"></i>
                 </div>
                 <div>
                     <span class="text-xs text-slate-500 font-semibold uppercase tracking-wider block">Today's Conditions</span>
                     <div class="flex items-center gap-2">
                         <span class="text-lg font-extrabold text-slate-700">82°F Sunny</span>
-                        <span class="text-xs px-2 py-0.5 bg-sky-50 border border-sky-100 text-brand-blue rounded-md font-semibold">Water: 78°F</span>
+                        <span class="text-xs px-2 py-0.5 bg-blue-50 border border-blue-100 text-brand-royal rounded-md font-semibold">Water: 78°F</span>
                     </div>
                     <span class="text-xs text-slate-400 block">Updated hourly from HG Office</span>
                 </div>
@@ -226,12 +201,12 @@
 
             <!-- Rapid Alert Widget -->
             <div class="pt-4 md:pt-0 flex flex-col justify-center">
-                <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider block mb-1">Latest Swim Meet Update</span>
-                <p class="text-sm font-semibold text-brand-dark line-clamp-2">
-                    <i class="fa-solid fa-bullhorn text-brand-sky mr-1.5"></i> Registration for 2026 Gators Swim/Dive season is fully open! Sign up via GoMotion today.
+                <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider block mb-1">Latest Team Update</span>
+                <p class="text-sm font-semibold text-brand-navy line-clamp-2">
+                    <i class="fa-solid fa-bullhorn text-brand-royal mr-1.5"></i> Registration for the 2026 Seahorses Swim & Dive season is open! Secure your spots via GoMotion.
                 </p>
                 <div class="mt-2 flex gap-3 text-xs">
-                    <a href="#quick-links" class="text-brand-blue hover:text-brand-dark font-bold flex items-center gap-1">
+                    <a href="#quick-links" class="text-brand-royal hover:text-brand-navy font-bold flex items-center gap-1">
                         Get Started <i class="fa-solid fa-chevron-right text-[10px]"></i>
                     </a>
                 </div>
@@ -242,11 +217,11 @@
     <!-- Main Content Hub: Frequently Needed Items -->
     <section id="quick-links" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4 slab-heading">
+            <h2 class="text-3xl md:text-4xl font-black font-logo text-brand-navy mb-4">
                 Frequently Needed Items & Links
             </h2>
             <p class="text-slate-600 font-medium">
-                Find active links for swim team registration, suit ordering, personalized gear, volunteer spots, banquets, and pool schedules. Filter by category to find exactly what you need.
+                Find active links for team registrations, suit ordering, personalized gear, volunteer openings, banquets, and pool schedules.
             </p>
 
             <!-- Live Search Bar -->
@@ -255,16 +230,16 @@
                     <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
                 </div>
                 <input type="text" id="link-search" placeholder="Search team suits, signupgenius, lessons, forms..." 
-                    class="block w-full pl-10 pr-4 py-3.5 border border-slate-200 rounded-2xl bg-white shadow-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent text-sm transition-all duration-300">
+                    class="block w-full pl-10 pr-4 py-3.5 border border-slate-200 rounded-2xl bg-white shadow-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-royal focus:border-transparent text-sm transition-all duration-300">
             </div>
 
             <!-- Categories Tabs -->
             <div class="flex flex-wrap justify-center gap-2 mt-6">
-                <button onclick="filterLinks('all')" id="tab-all" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold transition bg-brand-blue text-white shadow">All Items</button>
-                <button onclick="filterLinks('swimteam')" id="tab-swimteam" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-dark transition">Swim & Dive Team</button>
-                <button onclick="filterLinks('membership')" id="tab-membership" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-dark transition">Membership & Forms</button>
-                <button onclick="filterLinks('booking')" id="tab-booking" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-dark transition">Courts & Recreation</button>
-                <button onclick="filterLinks('docs')" id="tab-docs" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-dark transition">Bylaws & Docs</button>
+                <button onclick="filterLinks('all')" id="tab-all" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold transition bg-brand-royal text-white shadow">All Items</button>
+                <button onclick="filterLinks('swimteam')" id="tab-swimteam" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-navy transition">Swim & Dive Team</button>
+                <button onclick="filterLinks('membership')" id="tab-membership" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-navy transition">Membership & Forms</button>
+                <button onclick="filterLinks('booking')" id="tab-booking" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-navy transition">Courts & Recreation</button>
+                <button onclick="filterLinks('docs')" id="tab-docs" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-navy transition">Bylaws & Docs</button>
             </div>
         </div>
 
@@ -272,90 +247,90 @@
         <div id="links-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
             
             <!-- Link Card 1: GoMotion Registration -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="swimteam" data-keywords="gomotion swim dive registration teamunify signup gators">
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="swimteam" data-keywords="gomotion swim dive registration teamunify signup seahorses">
                 <div>
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-sky-50 text-brand-blue flex items-center justify-center text-xl border border-sky-100">
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-royal flex items-center justify-center text-xl">
                             <i class="fa-solid fa-person-swimming"></i>
                         </div>
-                        <span class="px-2.5 py-1 bg-sky-50 text-brand-blue border border-sky-100 rounded-full text-xs font-bold uppercase tracking-wider">Primary Portal</span>
+                        <span class="px-2.5 py-1 bg-blue-50 text-brand-royal rounded-full text-xs font-bold uppercase tracking-wider">Primary Portal</span>
                     </div>
                     <h3 class="text-lg font-bold text-slate-800 mb-2">GoMotion (TeamUnify) Portal</h3>
                     <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        Register for the Haddon Glen Gators Swim & Dive team, track swimmer times, view meet schedules, sign up for parent volunteer positions, and view declarations.
+                        Register for the Seahorses Swim & Dive team, track swimmer personal records, view swim layouts, sign up for operations assignments, and confirm event declarations.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-brand-blue font-semibold"><i class="fa-solid fa-link mr-1 text-brand-sky"></i> gomotionapp.com</span>
-                    <a href="https://www.gomotionapp.com/team/rechgsdt/page/home" target="_blank" class="px-4 py-2 bg-brand-blue hover:bg-brand-dark text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                    <span class="text-xs text-brand-royal font-semibold"><i class="fa-solid fa-link mr-1"></i> GoMotion Portal</span>
+                    <a href="#dashboard" class="px-4 py-2 bg-brand-royal hover:bg-brand-navy text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
                         Open Portal <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Link Card 2: Swim Stop Team Store -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="swimteam" data-keywords="swimstop apparel team suits gators suit swimwear caps gear gear purchase">
+            <!-- Link Card 2: Swim Apparel Store -->
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="swimteam" data-keywords="swimstop apparel team suits seahorses suit swimwear caps gear gear purchase store">
                 <div>
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center text-xl border border-blue-100">
-                            <i class="fa-solid fa-shirt text-brand-sky"></i>
+                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-sky flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-shirt"></i>
                         </div>
-                        <span class="px-2.5 py-1 bg-sky-50 text-brand-blue border border-sky-100 rounded-full text-xs font-bold uppercase tracking-wider">Required Gear</span>
+                        <span class="px-2.5 py-1 bg-blue-50 text-brand-royal rounded-full text-xs font-bold uppercase tracking-wider">Required Gear</span>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">Official Gators Team Suit Store</h3>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Official Seahorses Suit Store</h3>
                     <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        Order your required custom Gators swimsuits, matching caps, warmups, parkas, and high-quality goggles online via Swim Stop. Free shipping options available for team window delivery.
+                        Order your matching custom Seahorses swimsuits, official team caps, protective warm-up jackets, and competition-ready racing goggles securely online.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-brand-blue font-semibold"><i class="fa-solid fa-bag-shopping mr-1 text-brand-sky"></i> swimstop.pro</span>
-                    <a href="https://swimstop.pro/teams/haddon-glen-swim-team/" target="_blank" class="px-4 py-2 bg-brand-sky hover:bg-sky-400 text-brand-dark rounded-lg text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                    <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-bag-shopping mr-1"></i> Apparel Store</span>
+                    <a href="https://swimstop.pro/" target="_blank" class="px-4 py-2 bg-brand-sky hover:bg-sky-400 text-brand-navy rounded-lg text-xs font-bold transition flex items-center gap-1.5">
                         Shop Suits <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Link Card 3: Personalized Caps -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="swimteam" data-keywords="personalized silicone swim caps order custom gear gators name">
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="swimteam" data-keywords="personalized silicone swim caps order custom gear seahorses name">
                 <div>
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-sky-100 text-brand-blue flex items-center justify-center text-xl">
+                        <div class="w-12 h-12 rounded-xl bg-sky-50 text-brand-sky flex items-center justify-center text-xl">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
-                        <span class="px-2.5 py-1 bg-sky-100 text-brand-blue rounded-full text-xs font-bold uppercase tracking-wider">Pre-Order Only</span>
+                        <span class="px-2.5 py-1 bg-sky-50 text-brand-navy rounded-full text-xs font-bold uppercase tracking-wider">Pre-Order Only</span>
                     </div>
                     <h3 class="text-lg font-bold text-slate-800 mb-2">Personalized Silicone Caps</h3>
                     <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        Add custom printed swimmer last names on the official 100% silicone white Gators swim caps. Ensures caps don't get lost on deck and looks fantastic during meets.
+                        Add custom printed swimmer last names on your official 100% silicone white Seahorses swim caps. Promotes visibility on deck and high team spirit.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-clock mr-1 text-brand-sky"></i> Closes Soon</span>
-                    <a href="https://swimstopshop.com/product/haddon-glen-26-personalized-silicone-caps/" target="_blank" class="px-4 py-2 bg-brand-blue hover:bg-brand-dark text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
-                        Order Caps <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                    </a>
+                    <span class="text-xs text-brand-royal font-semibold"><i class="fa-solid fa-clock mr-1"></i> Limited Window</span>
+                    <button onclick="openModal('lessons-modal')" class="px-4 py-2 bg-brand-navy hover:bg-brand-royal text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                        Order Caps <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                    </button>
                 </div>
             </div>
 
             <!-- Link Card 4: Banquet Registration -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="swimteam" data-keywords="banquet registration bluesombrero dinner award dinner banquet gators ticket">
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="swimteam" data-keywords="banquet registration dinner award dinner banquet seahorses ticket">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-trophy text-brand-sky"></i>
+                            <i class="fa-solid fa-trophy"></i>
                         </div>
                         <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-full text-xs font-bold uppercase tracking-wider">End of Season</span>
                     </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">Gators Banquet Registration</h3>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Seahorses Banquet Registration</h3>
                     <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        Register for the annual Swim and Dive Team Banquet held via Blue Sombrero. Book tickets, specify allergy/dietary requirements, and RSVP for swimmers and family members.
+                        Sign up for the annual celebration event. Purchase entry passes, coordinate dietary accommodations, and complete registration layout preferences for athletes and guests.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-indigo-700 font-semibold"><i class="fa-solid fa-calendar mr-1 text-indigo-400"></i> Blue Sombrero</span>
-                    <a href="https://leagues.bluesombrero.com/hgswimdive" target="_blank" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                    <span class="text-xs text-indigo-700 font-semibold"><i class="fa-solid fa-calendar mr-1"></i> Annual Banquet</span>
+                    <button onclick="openFormDemo()" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
                         RSVP Banquet <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -363,19 +338,19 @@
             <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="swimteam" data-keywords="signupgenius volunteer timer concession stand lane help parent hours">
                 <div>
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-sky-50 text-brand-blue flex items-center justify-center text-xl border border-sky-100">
-                            <i class="fa-solid fa-handshake-angle text-brand-sky"></i>
+                        <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-handshake-angle"></i>
                         </div>
-                        <span class="px-2.5 py-1 bg-sky-50 text-brand-blue rounded-full text-xs font-bold uppercase tracking-wider border border-sky-100">Required Hours</span>
+                        <span class="px-2.5 py-1 bg-rose-50 text-rose-700 rounded-full text-xs font-bold uppercase tracking-wider">Required Info</span>
                     </div>
                     <h3 class="text-lg font-bold text-slate-800 mb-2">Volunteer Spot Sign-Ups</h3>
                     <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        Each team family is requested to work a designated number of shifts. Claim your slots for timers, marshals, concession stands, and clean-up crews using our SignUpGenius sheets.
+                        Each team family participates in club execution. Claim your active deck duty assignments for swim lane timing, course monitoring, or concession operations via SignUpGenius.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-heart mr-1 text-brand-sky"></i> SignUpGenius</span>
-                    <button onclick="openModal('volunteer-modal')" class="px-4 py-2 bg-brand-blue hover:bg-brand-dark text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                    <span class="text-xs text-rose-700 font-semibold"><i class="fa-solid fa-heart mr-1"></i> SignUpGenius</span>
+                    <button onclick="openModal('volunteer-modal')" class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
                         Get Shifts <i class="fa-solid fa-magnifying-glass text-[9px]"></i>
                     </button>
                 </div>
@@ -385,19 +360,19 @@
             <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="membership" data-keywords="membership application buy bond pool rates form family sign up">
                 <div>
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center text-xl border border-blue-100">
-                            <i class="fa-solid fa-id-card text-brand-sky"></i>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-id-card"></i>
                         </div>
-                        <span class="px-2.5 py-1 bg-blue-50 text-brand-blue rounded-full text-xs font-bold uppercase tracking-wider">New & Renewal</span>
+                        <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-bold uppercase tracking-wider">New & Renewal</span>
                     </div>
                     <h3 class="text-lg font-bold text-slate-800 mb-2">Pool Membership Registration</h3>
                     <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        Ready to join the Haddon Glen family? Apply for full-time seasonal club membership, upload safety waivers, submit recurring banking drafts, and view active bond availability.
+                        Submit structural paperwork for full-season facility entry access, approve required medical/safety waivers, and complete recurring banking authorization forms.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-brand-blue font-semibold"><i class="fa-solid fa-clipboard-list mr-1 text-brand-sky"></i> Google Form Link</span>
-                    <button onclick="openFormDemo()" class="px-4 py-2 bg-brand-blue hover:bg-brand-dark text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                    <span class="text-xs text-emerald-700 font-semibold"><i class="fa-solid fa-clipboard-list mr-1"></i> Application Portal</span>
+                    <button onclick="openFormDemo()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
                         Apply Online <i class="fa-solid fa-file-pen text-[9px]"></i>
                     </button>
                 </div>
@@ -407,19 +382,19 @@
             <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="booking" data-keywords="tennis pickleball court book booking reservation reserve play racket">
                 <div>
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-sky-50 text-brand-sky flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-table-tennis-paddle-ball text-brand-blue"></i>
+                        <div class="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-table-tennis-paddle-ball"></i>
                         </div>
-                        <span class="px-2.5 py-1 bg-sky-50 text-brand-blue rounded-full text-xs font-bold uppercase tracking-wider border border-sky-100">Members Only</span>
+                        <span class="px-2.5 py-1 bg-orange-50 text-orange-700 rounded-full text-xs font-bold uppercase tracking-wider">Members Only</span>
                     </div>
                     <h3 class="text-lg font-bold text-slate-800 mb-2">Tennis & Pickleball Bookings</h3>
                     <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        Book a playing court for Tennis or Pickleball. Select your date, desired court number (1-4), playing time block, and manage existing reservations instantly.
+                        Schedule dynamic court access for Tennis or Pickleball layouts. Set playing configurations, specify court preferences, and manage time blocks instantly.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-calendar-check mr-1 text-brand-sky"></i> CourtReserve HG</span>
-                    <button onclick="openModal('court-modal')" class="px-4 py-2 bg-brand-sky hover:bg-sky-400 text-brand-dark rounded-lg text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                    <span class="text-xs text-orange-700 font-semibold"><i class="fa-solid fa-calendar-check mr-1"></i> CourtReserve</span>
+                    <button onclick="openModal('court-modal')" class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
                         Reserve Court <i class="fa-solid fa-calendar text-[9px]"></i>
                     </button>
                 </div>
@@ -430,17 +405,17 @@
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-12 h-12 rounded-xl bg-slate-50 text-slate-600 flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-shield-halved text-brand-sky"></i>
+                            <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold uppercase tracking-wider">PDF Handbook</span>
                     </div>
                     <h3 class="text-lg font-bold text-slate-800 mb-2">Club Rules & Regulations</h3>
                     <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        Ensure a safe and respectful summer. Read our updated pool safety rules, guest attendance limits, kiddie pool rules, and diving well safety directives.
+                        Review administrative structural directives including basic operations safety controls, guest limit allowances, diving pool requirements, and facility code codes.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-file-pdf mr-1 text-brand-sky"></i> HG_Bylaws.pdf</span>
+                    <span class="text-xs text-slate-500 font-semibold"><i class="fa-solid fa-file-pdf mr-1"></i> Bylaws_Handbook.pdf</span>
                     <a href="#rules" class="px-4 py-2 bg-slate-700 hover:bg-slate-800 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
                         View Rules <i class="fa-solid fa-eye text-[9px]"></i>
                     </a>
@@ -451,19 +426,19 @@
             <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="membership" data-keywords="swim lessons level 1 level 2 toddler learn to swim private classes safety">
                 <div>
                     <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-sky-50 text-brand-blue flex items-center justify-center text-xl border border-sky-100">
+                        <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl">
                             <i class="fa-solid fa-children"></i>
                         </div>
-                        <span class="px-2.5 py-1 bg-sky-50 text-brand-blue rounded-full text-xs font-bold uppercase tracking-wider">All Ages</span>
+                        <span class="px-2.5 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-bold uppercase tracking-wider">All Levels</span>
                     </div>
                     <h3 class="text-lg font-bold text-slate-800 mb-2">Learn to Swim Lessons</h3>
                     <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        We offer both group and private swimming lessons structured by certified lifeguards. High swimmer-to-instructor ratios ensure water confidence and speed.
+                        Coordinate skill-building instruction led by certified training staff. Focused environments optimized for personal confidence, aquatic layout safety, and physical conditioning.
                     </p>
                 </div>
                 <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-brand-blue font-semibold"><i class="fa-solid fa-water mr-1 text-brand-sky"></i> Sign-Up Open</span>
-                    <button onclick="openModal('lessons-modal')" class="px-4 py-2 bg-brand-sky hover:bg-sky-400 text-brand-dark rounded-lg text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                    <span class="text-xs text-teal-700 font-semibold"><i class="fa-solid fa-water mr-1"></i> Lessons Open</span>
+                    <button onclick="openModal('lessons-modal')" class="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
                         Register Lessons <i class="fa-solid fa-chevron-right text-[9px]"></i>
                     </button>
                 </div>
@@ -478,46 +453,46 @@
             </div>
             <h3 class="text-lg font-bold text-slate-800 mb-1">No matches found</h3>
             <p class="text-slate-500 text-sm">Try checking your spelling or looking under "All Items".</p>
-            <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-brand-blue text-white text-xs font-bold rounded-lg hover:bg-brand-dark transition">
+            <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-brand-royal text-white text-xs font-bold rounded-lg hover:bg-brand-navy transition">
                 Reset Filters
             </button>
         </div>
     </section>
 
     <!-- Interactive Membership Fee Calculator -->
-    <section id="calculator" class="bg-brand-lightbg py-16 px-4 sm:px-6 lg:px-8 border-y border-slate-100">
+    <section id="calculator" class="bg-brand-icebg py-16 px-4 sm:px-6 lg:px-8 border-y border-slate-100">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
                 <!-- Information -->
                 <div class="lg:col-span-5">
-                    <div class="inline-flex items-center gap-2 bg-brand-blue/10 text-brand-blue px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-brand-blue/20">
+                    <div class="inline-flex items-center gap-2 bg-brand-royal/10 text-brand-royal px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
                         <i class="fa-solid fa-coins"></i> Fees & Dues
                     </div>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-6 leading-tight slab-heading">
+                    <h2 class="text-3xl md:text-4xl font-black font-logo text-brand-navy mb-6 leading-tight">
                         Calculate Your 2026 Membership Dues
                     </h2>
                     <p class="text-slate-600 mb-6 leading-relaxed">
-                        Haddon Glen offers multiple tiers of memberships to accommodate individuals, couples, and active families. Use our interactive estimator to compute the cost of your summer fun!
+                        We provide flexible administrative tiers matching variable household structures. Select custom upgrade layouts below to evaluate prospective active balances instantly.
                     </p>
                     
                     <div class="space-y-4">
                         <div class="flex items-start gap-3">
-                            <div class="mt-1 w-5 h-5 rounded-full bg-brand-blue text-white flex items-center justify-center text-[10px] font-bold">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-brand-royal text-white flex items-center justify-center text-[10px] font-bold">
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">Bond Requirement</h4>
-                                <p class="text-xs text-slate-500">New memberships require a refundable bond purchase, payable in easy installments or upfront.</p>
+                                <h4 class="font-bold text-slate-800 text-sm">Bond Allocation Requirements</h4>
+                                <p class="text-xs text-slate-500">Structural enrollment parameters dictate an initial refundable certificate bond procurement, clearable across custom terms.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="mt-1 w-5 h-5 rounded-full bg-brand-blue text-white flex items-center justify-center text-[10px] font-bold">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-brand-royal text-white flex items-center justify-center text-[10px] font-bold">
                                 <i class="fa-solid fa-check"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">Gators Swim Team Add-On</h4>
-                                <p class="text-xs text-slate-500">Subsidized swimmer rates for standard members to participate in the competitive Tri-County league.</p>
+                                <h4 class="font-bold text-slate-800 text-sm">Seahorses Swim Team Add-On</h4>
+                                <p class="text-xs text-slate-500">Access bundled athlete rates enabling roster participation within competitive local organizational schedules.</p>
                             </div>
                         </div>
                     </div>
@@ -531,29 +506,29 @@
                             <div>
                                 <label class="block text-sm font-extrabold text-slate-700 uppercase tracking-wider mb-3">1. Select Membership Tier</label>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    <label class="relative border-2 border-brand-blue bg-brand-blue/5 rounded-2xl p-4 cursor-pointer hover:border-brand-blue transition-all duration-200 block" id="lbl-tier-family">
-                                        <input type="radio" name="membership-tier" value="family" checked class="absolute right-4 top-4 text-brand-blue focus:ring-brand-blue" onchange="calculateDues()">
-                                        <span class="block font-extrabold text-brand-dark text-base">Family Pass</span>
+                                    <label class="relative border-2 border-brand-royal bg-brand-icebg rounded-2xl p-4 cursor-pointer hover:border-brand-royal transition-all duration-200 block" id="lbl-tier-family">
+                                        <input type="radio" name="membership-tier" value="family" checked class="absolute right-4 top-4 text-brand-royal focus:ring-brand-royal" onchange="calculateDues()">
+                                        <span class="block font-extrabold text-brand-navy text-base">Family Pass</span>
                                         <span class="block text-xs text-slate-500 mt-1">Up to 5 family members residing in same home.</span>
-                                        <span class="block text-sm font-bold text-brand-blue mt-3">$575 / yr</span>
+                                        <span class="block text-sm font-bold text-brand-royal mt-3">$575 / yr</span>
                                     </label>
-                                    <label class="relative border border-slate-200 rounded-2xl p-4 cursor-pointer hover:border-brand-blue transition-all duration-200 block" id="lbl-tier-couple">
-                                        <input type="radio" name="membership-tier" value="couple" class="absolute right-4 top-4 text-brand-blue focus:ring-brand-blue" onchange="calculateDues()">
-                                        <span class="block font-extrabold text-brand-dark text-base">Two-Person / Couple</span>
+                                    <label class="relative border border-slate-200 rounded-2xl p-4 cursor-pointer hover:border-brand-royal transition-all duration-200 block" id="lbl-tier-couple">
+                                        <input type="radio" name="membership-tier" value="couple" class="absolute right-4 top-4 text-brand-royal focus:ring-brand-royal" onchange="calculateDues()">
+                                        <span class="block font-extrabold text-brand-navy text-base">Two-Person / Couple</span>
                                         <span class="block text-xs text-slate-500 mt-1">Perfect for couples or parent + 1 child.</span>
-                                        <span class="block text-sm font-bold text-brand-blue mt-3">$450 / yr</span>
+                                        <span class="block text-sm font-bold text-brand-royal mt-3">$450 / yr</span>
                                     </label>
-                                    <label class="relative border border-slate-200 rounded-2xl p-4 cursor-pointer hover:border-brand-blue transition-all duration-200 block" id="lbl-tier-single">
-                                        <input type="radio" name="membership-tier" value="single" class="absolute right-4 top-4 text-brand-blue focus:ring-brand-blue" onchange="calculateDues()">
-                                        <span class="block font-extrabold text-brand-dark text-base">Individual Active</span>
+                                    <label class="relative border border-slate-200 rounded-2xl p-4 cursor-pointer hover:border-brand-royal transition-all duration-200 block" id="lbl-tier-single">
+                                        <input type="radio" name="membership-tier" value="single" class="absolute right-4 top-4 text-brand-royal focus:ring-brand-royal" onchange="calculateDues()">
+                                        <span class="block font-extrabold text-brand-navy text-base">Individual Active</span>
                                         <span class="block text-xs text-slate-500 mt-1">Standard adult single membership pass.</span>
-                                        <span class="block text-sm font-bold text-brand-blue mt-3">$325 / yr</span>
+                                        <span class="block text-sm font-bold text-brand-royal mt-3">$325 / yr</span>
                                     </label>
-                                    <label class="relative border border-slate-200 rounded-2xl p-4 cursor-pointer hover:border-brand-blue transition-all duration-200 block" id="lbl-tier-senior">
-                                        <input type="radio" name="membership-tier" value="senior" class="absolute right-4 top-4 text-brand-blue focus:ring-brand-blue" onchange="calculateDues()">
-                                        <span class="block font-extrabold text-brand-dark text-base">Senior Citizen (62+)</span>
+                                    <label class="relative border border-slate-200 rounded-2xl p-4 cursor-pointer hover:border-brand-royal transition-all duration-200 block" id="lbl-tier-senior">
+                                        <input type="radio" name="membership-tier" value="senior" class="absolute right-4 top-4 text-brand-royal focus:ring-brand-royal" onchange="calculateDues()">
+                                        <span class="block font-extrabold text-brand-navy text-base">Senior Citizen (62+)</span>
                                         <span class="block text-xs text-slate-500 mt-1">Discounted rate for local senior residents.</span>
-                                        <span class="block text-sm font-bold text-brand-blue mt-3">$225 / yr</span>
+                                        <span class="block text-sm font-bold text-brand-royal mt-3">$225 / yr</span>
                                     </label>
                                 </div>
                             </div>
@@ -563,17 +538,17 @@
                                 <label class="block text-sm font-extrabold text-slate-700 uppercase tracking-wider mb-3">2. Optional Upgrades & Fees</label>
                                 <div class="space-y-3">
                                     <label class="flex items-center gap-3 bg-slate-50 hover:bg-slate-100/50 p-3.5 rounded-xl border border-slate-100 transition cursor-pointer">
-                                        <input type="checkbox" id="add-bond" checked class="rounded text-brand-blue focus:ring-brand-blue w-5 h-5" onchange="calculateDues()">
+                                        <input type="checkbox" id="add-bond" checked class="rounded text-brand-royal focus:ring-brand-royal w-5 h-5" onchange="calculateDues()">
                                         <div>
-                                            <span class="block text-sm font-bold text-slate-700">Add Club Bond Fee (One-Time) <span class="text-brand-blue">+$200</span></span>
-                                            <span class="block text-xs text-slate-500">Required for new members. Fully refundable upon certificate termination.</span>
+                                            <span class="block text-sm font-bold text-slate-700">Add Club Bond Fee (One-Time) <span class="text-brand-royal">+$200</span></span>
+                                            <span class="block text-xs text-slate-500">Required for new enrollments. Refundable structural asset upon certificate exit.</span>
                                         </div>
                                     </label>
                                     <label class="flex items-center gap-3 bg-slate-50 hover:bg-slate-100/50 p-3.5 rounded-xl border border-slate-100 transition cursor-pointer">
-                                        <input type="checkbox" id="add-swimteam" class="rounded text-brand-blue focus:ring-brand-blue w-5 h-5" onchange="calculateDues()">
+                                        <input type="checkbox" id="add-swimteam" class="rounded text-brand-royal focus:ring-brand-royal w-5 h-5" onchange="calculateDues()">
                                         <div>
-                                            <span class="block text-sm font-bold text-slate-700">Join Gators Swim & Dive Team <span class="text-brand-blue">+$95 per swimmer</span></span>
-                                            <span class="block text-xs text-slate-500">Registration fee, covers league insurance, meet entry fees, and custom caps.</span>
+                                            <span class="block text-sm font-bold text-slate-700">Join Seahorses Swim & Dive Team <span class="text-brand-royal">+$95 per swimmer</span></span>
+                                            <span class="block text-xs text-slate-500">Roster processing allocation. Inclusions cover equipment tracking and safety profiles.</span>
                                         </div>
                                     </label>
                                     <div id="swimmer-count-div" class="hidden pl-8 animate-fadeIn">
@@ -588,15 +563,15 @@
                             </div>
 
                             <!-- Calculation Result -->
-                            <div class="bg-brand-dark text-white rounded-2xl p-6 relative overflow-hidden">
+                            <div class="bg-brand-navy text-white rounded-2xl p-6 relative overflow-hidden">
                                 <div class="absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-brand-sky/10 blur-xl"></div>
                                 <div class="flex flex-col sm:flex-row justify-between items-center relative z-10 gap-4">
                                     <div>
-                                        <span class="text-xs text-sky-200 uppercase tracking-widest font-bold">Estimated Summer Cost</span>
+                                        <span class="text-xs text-blue-200 uppercase tracking-widest font-bold">Estimated Cost Summary</span>
                                         <span class="block text-4xl font-extrabold text-brand-sky mt-1" id="calculated-total">$775.00</span>
-                                        <span class="text-[10px] text-sky-100 block mt-1">*Tax & transaction processing fees calculated at checkout.</span>
+                                        <span class="text-[10px] text-blue-100 block mt-1">*Final gateway calculation reflects active system transactional variables.</span>
                                     </div>
-                                    <a href="#quick-links" class="w-full sm:w-auto px-5 py-3 bg-brand-sky hover:bg-sky-400 text-brand-dark font-extrabold rounded-xl transition text-center shadow">
+                                    <a href="#quick-links" class="w-full sm:w-auto px-5 py-3 bg-brand-sky hover:bg-sky-400 text-brand-navy font-extrabold rounded-xl transition text-center shadow">
                                         Apply Online Today
                                     </a>
                                 </div>
@@ -613,23 +588,23 @@
     <!-- Schedules & Calendar Section -->
     <section id="schedule" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-center max-w-2xl mx-auto mb-12">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4 slab-heading">
+            <h2 class="text-3xl md:text-4xl font-black font-logo text-brand-navy mb-4">
                 Hours of Operation & Calendars
             </h2>
             <p class="text-slate-600 font-medium">
-                Keep track of pool hours, upcoming swim meets, and social events. Schedule changes are updated here daily.
+                Track dynamic operation blocks, organized team workouts, and neighborhood club social calendars seamlessly.
             </p>
 
             <!-- Calendar Tabs -->
             <div class="flex justify-center border-b border-slate-200 mt-8">
-                <button onclick="switchCalendar('hours')" id="btn-cal-hours" class="calendar-btn border-b-2 border-brand-blue text-brand-blue px-6 py-3 font-bold text-sm transition">
-                    <i class="fa-solid fa-clock mr-1.5 text-brand-sky"></i> Pool Hours
+                <button onclick="switchCalendar('hours')" id="btn-cal-hours" class="calendar-btn border-b-2 border-brand-royal text-brand-royal px-6 py-3 font-bold text-sm transition">
+                    <i class="fa-solid fa-clock mr-1.5"></i> Pool Hours
                 </button>
                 <button onclick="switchCalendar('meets')" id="btn-cal-meets" class="calendar-btn border-b-2 border-transparent text-slate-500 hover:text-slate-800 px-6 py-3 font-bold text-sm transition">
-                    <i class="fa-solid fa-person-swimming mr-1.5 text-brand-sky"></i> Gators Meet Schedule
+                    <i class="fa-solid fa-person-swimming mr-1.5"></i> Seahorses Meet Schedule
                 </button>
                 <button onclick="switchCalendar('social')" id="btn-cal-social" class="calendar-btn border-b-2 border-transparent text-slate-500 hover:text-slate-800 px-6 py-3 font-bold text-sm transition">
-                    <i class="fa-solid fa-champagne-glasses mr-1.5 text-brand-sky"></i> Club Socials
+                    <i class="fa-solid fa-champagne-glasses mr-1.5"></i> Club Socials
                 </button>
             </div>
         </div>
@@ -640,55 +615,55 @@
                 <!-- Card -->
                 <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
                     <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Regular Season Hours
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Regular Season Hours
                     </h3>
-                    <p class="text-xs text-slate-500 mb-4">Starting June 19, 2026 through Labor Day</p>
+                    <p class="text-xs text-slate-500 mb-4">Standard summer operation profiles through Labor Day</p>
                     <ul class="space-y-2.5 text-sm">
                         <li class="flex justify-between border-b border-slate-50 pb-1.5">
                             <span class="text-slate-600 font-medium">Monday - Thursday</span>
-                            <span class="font-bold text-brand-dark">11:00 AM - 8:00 PM</span>
+                            <span class="font-bold text-brand-navy">11:00 AM - 8:00 PM</span>
                         </li>
                         <li class="flex justify-between border-b border-slate-50 pb-1.5">
                             <span class="text-slate-600 font-medium">Friday</span>
-                            <span class="font-bold text-brand-dark">11:00 AM - 9:00 PM</span>
+                            <span class="font-bold text-brand-navy">11:00 AM - 9:00 PM</span>
                         </li>
                         <li class="flex justify-between border-b border-slate-50 pb-1.5">
                             <span class="text-slate-600 font-medium">Saturday - Sunday</span>
-                            <span class="font-bold text-brand-dark">10:00 AM - 8:00 PM</span>
+                            <span class="font-bold text-brand-navy">10:00 AM - 8:00 PM</span>
                         </li>
                     </ul>
                 </div>
                 <!-- Card -->
                 <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
                     <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-brand-sky"></span> Pre-Season Hours
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Pre-Season Hours
                     </h3>
-                    <p class="text-xs text-slate-500 mb-4">Starting Memorial Day Weekend through June 18</p>
+                    <p class="text-xs text-slate-500 mb-4">Starting Memorial Day Weekend until full release</p>
                     <ul class="space-y-2.5 text-sm">
                         <li class="flex justify-between border-b border-slate-50 pb-1.5">
                             <span class="text-slate-600 font-medium">Monday - Friday</span>
-                            <span class="font-bold text-brand-dark">4:00 PM - 8:00 PM</span>
+                            <span class="font-bold text-brand-navy">4:00 PM - 8:00 PM</span>
                         </li>
                         <li class="flex justify-between border-b border-slate-50 pb-1.5">
                             <span class="text-slate-600 font-medium">Saturday - Sunday</span>
-                            <span class="font-bold text-brand-dark">11:00 AM - 8:00 PM</span>
+                            <span class="font-bold text-brand-navy">11:00 AM - 8:00 PM</span>
                         </li>
                     </ul>
                 </div>
                 <!-- Card -->
                 <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
                     <h3 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span> Holiday & Custom Schedules
+                        <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Adjustments & Holidays
                     </h3>
-                    <p class="text-xs text-slate-500 mb-4">Holiday hours & swim meet closures</p>
+                    <p class="text-xs text-slate-500 mb-4">Holiday hours & home competition blockouts</p>
                     <ul class="space-y-2.5 text-sm">
                         <li class="flex justify-between border-b border-slate-50 pb-1.5">
                             <span class="text-slate-600 font-medium">July 4th (Independence Day)</span>
-                            <span class="font-bold text-brand-dark">10:00 AM - 6:00 PM</span>
+                            <span class="font-bold text-brand-navy">10:00 AM - 6:00 PM</span>
                         </li>
                         <li class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-600 font-medium">Wednesday Swim Meets</span>
-                            <span class="font-bold text-brand-dark">Pool closes at 4:30 PM</span>
+                            <span class="text-slate-600 font-medium">Wednesday Home Meets</span>
+                            <span class="font-bold text-brand-navy">Pool closes at 4:30 PM</span>
                         </li>
                     </ul>
                 </div>
@@ -700,56 +675,42 @@
             <div class="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden">
                 <table class="w-full text-left text-sm border-collapse">
                     <thead>
-                        <tr class="bg-brand-dark text-white uppercase text-xs tracking-wider">
+                        <tr class="bg-brand-navy text-white uppercase text-xs tracking-wider">
                             <th class="px-6 py-4 font-bold">Date</th>
-                            <th class="px-6 py-4 font-bold">Opponent / Event</th>
+                            <th class="px-6 py-4 font-bold">Opponent Layout</th>
                             <th class="px-6 py-4 font-bold">Location</th>
-                            <th class="px-6 py-4 font-bold">Time</th>
+                            <th class="px-6 py-4 font-bold">Timeline Parameters</th>
                             <th class="px-6 py-4 font-bold">Status</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
                         <tr>
                             <td class="px-6 py-4">June 13, 2026</td>
-                            <td class="px-6 py-4">Time Trials (All Gators Swimmers)</td>
-                            <td class="px-6 py-4 text-brand-blue">Haddon Glen (Home)</td>
+                            <td class="px-6 py-4">Time Trials (All Seahorses Registered)</td>
+                            <td class="px-6 py-4 text-brand-royal">Haddon Glen (Home)</td>
                             <td class="px-6 py-4">8:00 AM - 11:00 AM</td>
-                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-sky-50 text-brand-blue rounded text-xs font-semibold">Scheduled</span></td>
+                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-blue-50 text-brand-royal rounded text-xs font-semibold">Scheduled</span></td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4">June 20, 2026</td>
                             <td class="px-6 py-4">Home Meet vs. Woodcrest</td>
-                            <td class="px-6 py-4 text-brand-blue">Haddon Glen (Home)</td>
+                            <td class="px-6 py-4 text-brand-royal">Haddon Glen (Home)</td>
                             <td class="px-6 py-4">8:30 AM Warm-up</td>
-                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-sky-50 text-brand-blue rounded text-xs font-semibold">Scheduled</span></td>
+                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-blue-50 text-brand-royal rounded text-xs font-semibold">Scheduled</span></td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4">June 27, 2026</td>
                             <td class="px-6 py-4">Away Meet @ Gibbstown</td>
-                            <td class="px-6 py-4 text-sky-600">Gibbstown Pool (Away)</td>
+                            <td class="px-6 py-4 text-amber-600">Gibbstown Pool (Away)</td>
                             <td class="px-6 py-4">8:15 AM Warm-up</td>
-                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-sky-50 text-brand-blue rounded text-xs font-semibold">Scheduled</span></td>
+                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-blue-50 text-brand-royal rounded text-xs font-semibold">Scheduled</span></td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4">July 1, 2026</td>
                             <td class="px-6 py-4">Home Meet vs. Stratford</td>
-                            <td class="px-6 py-4 text-brand-blue">Haddon Glen (Home)</td>
-                            <td class="px-6 py-4">5:30 PM (Wednesday Night)</td>
-                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-sky-50 text-brand-blue rounded text-xs font-semibold">Scheduled</span></td>
-                        </tr>
-                        <tr>
-                            <td class="px-6 py-4">July 11, 2026</td>
-                            <td class="px-6 py-4">Away Meet @ Cherry Valley</td>
-                            <td class="px-6 py-4 text-sky-600">Cherry Valley Pool (Away)</td>
-                            <td class="px-6 py-4">8:15 AM Warm-up</td>
-                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-sky-50 text-brand-blue rounded text-xs font-semibold">Scheduled</span></td>
-                        </tr>
-                        <tr class="bg-brand-sky/10">
-                            <td class="px-6 py-4 font-bold text-brand-blue">Aug 1 & Aug 2, 2026</td>
-                            <td class="px-6 py-4 font-bold text-brand-dark">Tri-County Championship Meet</td>
-                            <td class="px-6 py-4 font-bold text-brand-blue">Haddon Glen (Home Host)</td>
-                            <td class="px-6 py-4">All Day Schedule</td>
-                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-brand-sky text-brand-dark rounded text-xs font-bold uppercase tracking-wider animate-pulse">Major Event</span></td>
+                            <td class="px-6 py-4 text-brand-royal">Haddon Glen (Home)</td>
+                            <td class="px-6 py-4">5:30 PM Event Start</td>
+                            <td class="px-6 py-4"><span class="px-2 py-0.5 bg-blue-50 text-brand-royal rounded text-xs font-semibold">Scheduled</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -763,8 +724,8 @@
                 <div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
                     <div class="p-6">
                         <span class="text-xs text-brand-sky font-bold uppercase tracking-widest block mb-1">June 12, 2026</span>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">School's Out Raft Night</h3>
-                        <p class="text-sm text-slate-500">Celebrate the final school bell! Bring your biggest inflatable rafts, inner tubes, and pool noodles. DJ music, slushies, and grill specials.</p>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">School's Out Raft Event</h3>
+                        <p class="text-sm text-slate-500">Launch into summer structural operations. Inflatable raft layout allowances active across primary lanes, custom catering options, and music tracks.</p>
                     </div>
                     <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs text-slate-500 font-bold">
                         Time: 5:00 PM - 8:30 PM
@@ -774,22 +735,11 @@
                 <div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
                     <div class="p-6">
                         <span class="text-xs text-brand-sky font-bold uppercase tracking-widest block mb-1">July 3, 2026</span>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">Pre-Independence Day BBQ</h3>
-                        <p class="text-sm text-slate-500">Kick off the holiday weekend with a community burger cookout, patriotic crafts for kids, water balloon tosses, and our famous greased watermelon game!</p>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Holiday Community BBQ</h3>
+                        <p class="text-sm text-slate-500">Gather at the pavilion layout for traditional seasonal food services, organized youth aquatic games, and recreational field challenges.</p>
                     </div>
                     <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs text-slate-500 font-bold">
                         Time: 12:00 PM - 4:00 PM
-                    </div>
-                </div>
-                <!-- Event Card -->
-                <div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-                    <div class="p-6">
-                        <span class="text-xs text-brand-sky font-bold uppercase tracking-widest block mb-1">July 24, 2026</span>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">Friday Gators Team Night</h3>
-                        <p class="text-sm text-slate-500">Special theme dinner night for swim and dive participants and their immediate families. Pasta loading dinner before Saturday divisional warmups.</p>
-                    </div>
-                    <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 text-xs text-slate-500 font-bold">
-                        Time: 6:00 PM - 9:00 PM
                     </div>
                 </div>
             </div>
@@ -800,20 +750,19 @@
     <section id="rules" class="bg-white py-16 px-4 sm:px-6 lg:px-8 border-t border-slate-100">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
-                <div class="inline-flex items-center gap-2 bg-sky-50 text-brand-blue px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-sky-100">
+                <div class="inline-flex items-center gap-2 bg-red-50 text-red-600 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
                     <i class="fa-solid fa-life-ring"></i> Safety Guidelines
                 </div>
-                <h2 class="text-3xl font-extrabold text-brand-dark mb-3 slab-heading">
+                <h2 class="text-3xl font-black font-logo text-brand-navy mb-3">
                     Pool Rules & Bylaws Quick Lookup
                 </h2>
                 <p class="text-slate-600 font-medium">
-                    Help us keep the pools clean, safe, and family-friendly. Please familiarize yourself with these key rules.
+                    Maintain systematic safety standards across all aquatic facilities. Review compliance controls below.
                 </p>
             </div>
 
             <!-- Accordion Wrapper -->
             <div class="space-y-4">
-                
                 <!-- Accordion 1 -->
                 <div class="border border-slate-100 rounded-2xl overflow-hidden transition-all duration-200">
                     <button onclick="toggleAccordion('acc1')" class="w-full flex justify-between items-center p-5 bg-slate-50 hover:bg-slate-100/50 text-left font-bold text-slate-700 focus:outline-none">
@@ -821,12 +770,11 @@
                         <i id="acc1-icon" class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-200"></i>
                     </button>
                     <div id="acc1-content" class="hidden p-5 border-t border-slate-50 text-sm text-slate-600 space-y-3 leading-relaxed">
-                        <p>Members must accompany their guests at all times while using the facility. Guest admission requires purchase of Guest Passes:</p>
+                        <p>Members must accompany invited guests systematically across facility perimeters. Guest access authorizations utilize clear tracking parameters:</p>
                         <ul class="list-disc pl-5 space-y-1.5">
-                            <li>Weekday Pass: $8 per guest.</li>
-                            <li>Weekend/Holiday Pass: $12 per guest.</li>
-                            <li>Weekly/Long-term Guest Passes are available for house guests at the front gate.</li>
-                            <li>Members are responsible for any behavior policy violations committed by their guests.</li>
+                            <li>Standard Weekday Entry: $8 per unit.</li>
+                            <li>Weekend & Holiday Operational Entry: $12 per unit.</li>
+                            <li>Long-term structural passes are clearable at the front security checkpoint.</li>
                         </ul>
                     </div>
                 </div>
@@ -834,50 +782,18 @@
                 <!-- Accordion 2 -->
                 <div class="border border-slate-100 rounded-2xl overflow-hidden transition-all duration-200">
                     <button onclick="toggleAccordion('acc2')" class="w-full flex justify-between items-center p-5 bg-slate-50 hover:bg-slate-100/50 text-left font-bold text-slate-700 focus:outline-none">
-                        <span>2. Swimming Test & Deep End Bands</span>
+                        <span>2. Deep End Safety Band Verification</span>
                         <i id="acc2-icon" class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-200"></i>
                     </button>
                     <div id="acc2-content" class="hidden p-5 border-t border-slate-50 text-sm text-slate-600 space-y-3 leading-relaxed">
-                        <p>To ensure youth safety, children under the age of 14 must pass a basic deep-end swimming test supervised by a lifeguard before using the deep lanes or diving boards.</p>
-                        <p class="font-bold text-brand-dark">The Deep End Test requires:</p>
+                        <p>Swimmers under 14 years old must clear baseline safety evaluation controls supervised by on-duty lifeguard personnel prior to utilizing deep lanes or boards.</p>
+                        <p class="font-bold">Evaluation Directives:</p>
                         <ul class="list-disc pl-5 space-y-1">
-                            <li>Swimmer must swim 25 meters continuously without touching bottom or resting.</li>
-                            <li>Tread water for 1.5 minutes without struggling.</li>
-                            <li>Once passed, a color-coded wrist safety band will be issued at the front gate.</li>
+                            <li>Continuous transit across a 25-meter course layout without lane suspension.</li>
+                            <li>Tread water continuously for 1.5 minutes with clear physical stability.</li>
                         </ul>
                     </div>
                 </div>
-
-                <!-- Accordion 3 -->
-                <div class="border border-slate-100 rounded-2xl overflow-hidden transition-all duration-200">
-                    <button onclick="toggleAccordion('acc3')" class="w-full flex justify-between items-center p-5 bg-slate-50 hover:bg-slate-100/50 text-left font-bold text-slate-700 focus:outline-none">
-                        <span>3. Diving Well & Diving Board Directives</span>
-                        <i id="acc3-icon" class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-200"></i>
-                    </button>
-                    <div id="acc3-content" class="hidden p-5 border-t border-slate-50 text-sm text-slate-600 space-y-3 leading-relaxed">
-                        <ul class="list-disc pl-5 space-y-1.5">
-                            <li>Only one person on a diving board at any time.</li>
-                            <li>Divers must wait until the landing area in the well is completely clear before diving.</li>
-                            <li>Only one bounce is allowed on the board before takeoff (no repetitive high bouncing).</li>
-                            <li>Divers must immediately swim to the nearest side ladder to exit the diving well.</li>
-                            <li>Swimming or floating under diving boards is strictly prohibited.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Accordion 4 -->
-                <div class="border border-slate-100 rounded-2xl overflow-hidden transition-all duration-200">
-                    <button onclick="toggleAccordion('acc4')" class="w-full flex justify-between items-center p-5 bg-slate-50 hover:bg-slate-100/50 text-left font-bold text-slate-700 focus:outline-none">
-                        <span>4. Kiddie Pool & Infant Hygiene Regulations</span>
-                        <i id="acc4-icon" class="fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-200"></i>
-                    </button>
-                    <div id="acc4-content" class="hidden p-5 border-t border-slate-50 text-sm text-slate-600 space-y-3 leading-relaxed">
-                        <p>The kiddie pool is reserved strictly for toddlers and children under 6 years of age. Parental supervision in this gated zone is required at all times.</p>
-                        <p class="font-bold text-brand-blue">Strict Infant Hygiene:</p>
-                        <p>Any non-toilet trained child MUST wear an approved, snug-fitting swim diaper (reusable swim diapers with plastic covers preferred) under their swimsuit. Disposable diapers are strictly prohibited.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -885,272 +801,177 @@
     <!-- Location & Contact Us -->
     <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            
             <!-- Contact info & map -->
             <div class="lg:col-span-5 space-y-8">
                 <div>
-                    <h2 class="text-3xl font-extrabold text-brand-dark mb-4 slab-heading">
+                    <h2 class="text-3xl font-black font-logo text-brand-navy mb-4">
                         Visit & Contact Us
                     </h2>
                     <p class="text-slate-600 leading-relaxed">
-                        Have questions about swim lessons, bond transfers, or swim meets? Reach out directly or swing by Haddon Glen during regular pool hours. We'd love to show you around!
+                        Direct administrative inquiries regarding structural accounts, swim lesson options, or league layout data to our primary board tracking desk.
                     </p>
                 </div>
 
                 <div class="space-y-4">
                     <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-brand-lightbg text-brand-blue flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-royal flex items-center justify-center text-lg shadow-sm">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-800 text-sm">Pool Physical Location</h4>
+                            <h4 class="font-bold text-slate-800 text-sm">Physical Complex Layout</h4>
                             <p class="text-sm text-slate-500">1701 Walnut Ave, Haddon Heights, NJ 08035</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-brand-lightbg text-brand-blue flex items-center justify-center text-lg shadow-sm border border-sky-100">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-brand-royal flex items-center justify-center text-lg shadow-sm">
                             <i class="fa-solid fa-envelope-open-text"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-800 text-sm">Mailing / Admin Office</h4>
+                            <h4 class="font-bold text-slate-800 text-sm">Mailing Address Operations</h4>
                             <p class="text-sm text-slate-500">PO Box 6, Haddon Heights, NJ 08035</p>
                         </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-xl bg-brand-lightbg text-brand-blue flex items-center justify-center text-lg shadow-sm border border-sky-100">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-slate-800 text-sm">Office Phone</h4>
-                            <p class="text-sm text-slate-500">(856) 546-9257 (Voice Only)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Custom Mock Map Image with link to actual Google Maps -->
-                <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm relative group">
-                    <div class="absolute inset-0 bg-brand-dark/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <a href="https://maps.google.com/?q=1701+Walnut+Ave,+Haddon+Heights,+NJ+08035" target="_blank" class="px-5 py-3 bg-white text-slate-800 font-bold rounded-xl text-sm shadow hover:scale-105 transition border border-slate-100">
-                            <i class="fa-solid fa-map-location-dot mr-1 text-brand-blue"></i> View on Google Maps
-                        </a>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=600&auto=format&fit=crop" alt="Haddon Glen Location Map" class="w-full h-56 object-cover filter saturate-150">
-                    <div class="p-3 bg-slate-50 border-t border-slate-100 flex justify-between items-center text-xs font-bold text-slate-500">
-                        <span>Haddon Glen Swim Club</span>
-                        <span class="text-brand-blue">Haddon Heights, NJ</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Interactive Message form -->
+            <!-- Message form -->
             <div class="lg:col-span-7">
                 <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8">
-                    <h3 class="text-xl font-bold text-brand-dark mb-6">Send Club Board a Message</h3>
-                    
+                    <h3 class="text-xl font-bold text-brand-navy mb-6">Send Administrative Inquiry</h3>
                     <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-5">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">First & Last Name</label>
                                 <input type="text" required id="form-name" placeholder="John Doe" 
-                                    class="block w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-transparent text-sm">
+                                    class="block w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-royal focus:border-transparent text-sm">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Email Address</label>
                                 <input type="email" required id="form-email" placeholder="johndoe@gmail.com" 
-                                    class="block w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-transparent text-sm">
+                                    class="block w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-royal focus:border-transparent text-sm">
                             </div>
                         </div>
-
                         <div>
-                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Category of Inquiry</label>
-                            <select id="form-category" class="block w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-transparent text-sm bg-white">
-                                <option value="membership">New Club Membership & Bonds</option>
-                                <option value="swimteam">Gators Swim & Dive Team Info</option>
-                                <option value="lessons">Swim Lessons (Learn to Swim)</option>
-                                <option value="rental">Social Court & Pavilion Rental</option>
-                                <option value="other">Other Inquiries</option>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Inquiry Category</label>
+                            <select id="form-category" class="block w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-royal focus:border-transparent text-sm bg-white">
+                                <option value="membership">Membership Structure & Bonds</option>
+                                <option value="swimteam">Seahorses Team Operations</option>
+                                <option value="lessons">Instructional Programs</option>
+                                <option value="other">Other Fields</option>
                             </select>
                         </div>
-
                         <div>
-                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">How can we help you?</label>
-                            <textarea required id="form-message" rows="4" placeholder="Type your detailed message here..." 
-                                class="block w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-blue focus:border-transparent text-sm"></textarea>
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Message Parameters</label>
+                            <textarea required id="form-message" rows="4" placeholder="Detail your operational inquiry here..." 
+                                class="block w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-royal focus:border-transparent text-sm"></textarea>
                         </div>
-
-                        <button type="submit" class="w-full py-4 bg-brand-blue hover:bg-brand-dark text-white font-extrabold rounded-xl shadow-md transition duration-300">
-                            Submit Secure Inquiry
+                        <button type="submit" class="w-full py-4 bg-brand-royal hover:bg-brand-navy text-white font-extrabold rounded-xl shadow-md transition duration-300">
+                            Transmit Message Securely
                         </button>
                     </form>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Custom Modals (No alerts!) -->
-    <!-- Modal 1: Volunteer info -->
+    <!-- Modals -->
     <div id="volunteer-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-100 animate-fadeIn">
-            <div class="p-6 bg-brand-dark text-white flex justify-between items-center">
-                <h3 class="text-lg font-bold"><i class="fa-solid fa-handshake-angle text-brand-sky mr-2"></i> Gators Parent Volunteer Shifts</h3>
+            <div class="p-6 bg-brand-navy text-white flex justify-between items-center">
+                <h3 class="text-lg font-bold"><i class="fa-solid fa-handshake-angle text-brand-sky mr-2"></i> Team Volunteer Controls</h3>
                 <button onclick="closeModal('volunteer-modal')" class="text-white hover:text-brand-sky transition"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
             <div class="p-6 space-y-4">
                 <p class="text-sm text-slate-600 leading-relaxed">
-                    Volunteer sheets for Gators home/away dual meets are posted on SignUpGenius twice per month. Please select slots matching your swimmer's declaration status.
+                    Volunteer structural assignments publish dynamically via SignUpGenius configurations according to team timeline parameters.
                 </p>
-                <div class="bg-brand-lightbg rounded-2xl p-4 border border-brand-blue/20">
-                    <span class="block text-xs text-brand-blue uppercase tracking-wider font-extrabold mb-1">Required Volunteer Hours</span>
-                    <span class="block text-sm text-slate-700 font-bold">Minimum 12 hours per family for seasonal active swimmers.</span>
-                </div>
-                <div class="space-y-2">
-                    <a href="https://www.signupgenius.com/" target="_blank" class="block text-center py-3 bg-brand-blue hover:bg-brand-dark text-white rounded-xl font-bold text-sm transition">
-                        Proceed to SignUpGenius <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
-                    </a>
-                    <button onclick="closeModal('volunteer-modal')" class="block w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-bold text-sm transition">
-                        Back to Portal
-                    </button>
-                </div>
+                <button onclick="closeModal('volunteer-modal')" class="block w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-bold text-sm transition">
+                    Return to Portal
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- Modal 2: Court Reserves -->
     <div id="court-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-100 animate-fadeIn">
-            <div class="p-6 bg-brand-dark text-white flex justify-between items-center">
-                <h3 class="text-lg font-bold"><i class="fa-solid fa-table-tennis-paddle-ball text-brand-sky mr-2"></i> Racket Court Reservations</h3>
+            <div class="p-6 bg-brand-navy text-white flex justify-between items-center">
+                <h3 class="text-lg font-bold"><i class="fa-solid fa-table-tennis-paddle-ball text-brand-sky mr-2"></i> Racket Court Interface</h3>
                 <button onclick="closeModal('court-modal')" class="text-white hover:text-brand-sky transition"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
             <div class="p-6 space-y-4">
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Haddon Glen utilizes **CourtReserve** for booking Tennis Courts 1-2 and Pickleball Courts 3-4. Active pool/tennis members can reserve courts up to 7 days in advance.
-                </p>
-                <div class="bg-sky-50 rounded-2xl p-4 border border-sky-200 text-xs text-slate-600 space-y-1">
-                    <span class="font-bold text-brand-blue block mb-1">Court Guidelines:</span>
-                    <p>• Playing slots are limited to 1.5 hours per booking.</p>
-                    <p>• Clean athletic tennis shoes are strictly required.</p>
-                    <p>• Turn off court lights if you are the last player of the evening.</p>
-                </div>
-                <div class="space-y-2">
-                    <a href="https://courtreserve.com/" target="_blank" class="block text-center py-3 bg-brand-blue hover:bg-brand-dark text-white rounded-xl font-bold text-sm transition">
-                        Go to CourtReserve Login <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
-                    </a>
-                    <button onclick="closeModal('court-modal')" class="block w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-bold text-sm transition">
-                        Back to Portal
-                    </button>
-                </div>
+                <p class="text-sm text-slate-600">Access systemic court scheduling rules through CourtReserve modules using active membership verification data profiles.</p>
+                <button onclick="closeModal('court-modal')" class="block w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-bold text-sm transition">
+                    Return to Portal
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- Modal 3: Lessons -->
     <div id="lessons-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-100 animate-fadeIn">
-            <div class="p-6 bg-brand-dark text-white flex justify-between items-center">
-                <h3 class="text-lg font-bold"><i class="fa-solid fa-children text-brand-sky mr-2"></i> Learn To Swim lessons</h3>
+            <div class="p-6 bg-brand-navy text-white flex justify-between items-center">
+                <h3 class="text-lg font-bold"><i class="fa-solid fa-children text-brand-sky mr-2"></i> Instructional Programs</h3>
                 <button onclick="closeModal('lessons-modal')" class="text-white hover:text-brand-sky transition"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
             <div class="p-6 space-y-4">
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Registration for swim lessons is grouped into three 2-week sessions starting June 22, 2026. Private lessons can also be arranged directly with the Pool Manager.
-                </p>
-                <div class="border border-slate-100 rounded-2xl divide-y divide-slate-100 text-xs">
-                    <div class="p-3 flex justify-between">
-                        <span class="font-bold text-slate-700">Toddler Water Intro (Parent/Child)</span>
-                        <span class="text-brand-blue font-bold">$75 / Session</span>
-                    </div>
-                    <div class="p-3 flex justify-between">
-                        <span class="font-bold text-slate-700">Pre-Team Prep (Advanced Toddler)</span>
-                        <span class="text-brand-blue font-bold">$90 / Session</span>
-                    </div>
-                    <div class="p-3 flex justify-between">
-                        <span class="font-bold text-slate-700">Private 1-on-1 Swimmer Coaching</span>
-                        <span class="text-brand-blue font-bold">$35 / 30 Mins</span>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <button onclick="closeModal('lessons-modal'); document.getElementById('contact').scrollIntoView();" class="block w-full text-center py-3 bg-brand-blue hover:bg-brand-dark text-white rounded-xl font-bold text-sm transition">
-                        Contact Pool Manager to Sign Up
-                    </button>
-                    <button onclick="closeModal('lessons-modal')" class="block w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-bold text-sm transition">
-                        Back to Portal
-                    </button>
-                </div>
+                <p class="text-sm text-slate-600">Lesson scheduling parameters follow 2-week operation modules. Coordinate private training tracks through direct communication forms.</p>
+                <button onclick="closeModal('lessons-modal')" class="block w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-bold text-sm transition">
+                    Return to Portal
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- Success Modal -->
     <div id="success-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-slate-100 p-6 text-center animate-fadeIn">
-            <div class="w-16 h-16 bg-sky-100 text-brand-blue rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
-                <i class="fa-solid fa-circle-check text-brand-sky"></i>
+            <div class="w-16 h-16 bg-blue-100 text-brand-royal rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="fa-solid fa-circle-check"></i>
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-2">Message Sent Successfully</h3>
+            <h3 class="text-xl font-bold text-slate-800 mb-2">Transmission Logged</h3>
             <p id="success-msg-text" class="text-sm text-slate-500 leading-relaxed mb-6">
-                Thank you for contacting the Haddon Glen Board of Trustees. We will get back to you within 24-48 business hours.
+                Operational records updated. The Board of Trustees handles inbound messaging strings tracking administrative requirements.
             </p>
-            <button onclick="closeModal('success-modal')" class="w-full py-3 bg-brand-blue hover:bg-brand-dark text-white font-bold rounded-xl transition text-sm">
+            <button onclick="closeModal('success-modal')" class="w-full py-3 bg-brand-royal hover:bg-brand-navy text-white font-bold rounded-xl transition text-sm">
                 Close
             </button>
         </div>
     </div>
 
     <!-- Bottom Footer -->
-    <footer class="bg-brand-darknavy text-slate-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-brand-dark">
+    <footer class="bg-slate-900 text-slate-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-800">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-            
-            <!-- Column 1 -->
             <div class="md:col-span-2 space-y-4">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-lg bg-brand-dark flex items-center justify-center text-brand-sky font-bold text-lg border border-brand-sky">
+                    <div class="w-10 h-10 rounded-lg bg-brand-navy flex items-center justify-center text-brand-sky font-bold text-lg border border-brand-sky">
                         HG
                     </div>
                     <div>
-                        <span class="text-white font-bold text-base block font-serif">Haddon Glen Swim Club</span>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-sky">Home of the Gators</span>
+                        <span class="text-white font-bold text-base block font-logo">The Starting Block</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-sky">Haddon Glen Seahorses</span>
                     </div>
                 </div>
                 <p class="text-sm leading-relaxed text-slate-500">
-                    Proudly serving local swimmers in Haddon Heights, Haddonfield, Barrington, and surrounding South Jersey areas since 1951. Offering a secure, peaceful, and dynamic summer aquatic club experience.
+                    Providing exceptional community aquatic operations across safe, structural facility programming footprints since 1951.
                 </p>
-                <div class="flex gap-3 text-lg">
-                    <a href="https://www.facebook.com/" target="_blank" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-brand-blue hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook text-brand-sky"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-brand-blue hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram text-brand-sky"></i></a>
-                    <a href="https://www.twitter.com/" target="_blank" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-brand-blue hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-x-twitter text-brand-sky"></i></a>
-                </div>
             </div>
-
-            <!-- Column 2 -->
             <div>
-                <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Navigation</h3>
+                <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Navigation</h3>
                 <ul class="space-y-2 text-sm">
                     <li><a href="#dashboard" class="hover:text-brand-sky transition">Today's Status</a></li>
-                    <li><a href="#quick-links" class="hover:text-brand-sky transition">Quick Links Portal</a></li>
-                    <li><a href="#calculator" class="hover:text-brand-sky transition">Dues Calculator</a></li>
-                    <li><a href="#schedule" class="hover:text-brand-sky transition">Pool Hours & Meets</a></li>
-                    <li><a href="#rules" class="hover:text-brand-sky transition">Pool Regulations</a></li>
+                    <li><a href="#quick-links" class="hover:text-brand-sky transition">Links Hub</a></li>
+                    <li><a href="#calculator" class="hover:text-brand-sky transition">Dues Estimator</a></li>
                 </ul>
             </div>
-
-            <!-- Column 3 -->
             <div>
-                <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Affiliations</h3>
+                <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Structural Links</h3>
                 <ul class="space-y-2 text-sm text-slate-500">
-                    <li>Tri-County Swimming Pool Association (TCSPA)</li>
-                    <li>Mid-Atlantic Swim Association</li>
-                    <li>USA Swimming League</li>
-                    <li>Haddon Heights Sports Board</li>
+                    <li>Tri-County Swimming League Operations</li>
+                    <li>Recreational Social Form Systems</li>
                 </ul>
             </div>
-
         </div>
-
-        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-600 space-y-2">
-            <p>© 2026 Haddon Glen Swim Club. All Rights Reserved. Private 501(c)(7) Social Club.</p>
-            <p>Haddon Glen is hosted as an independent community portal. All product names, logos, and brands are property of their respective owners.</p>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800 text-center text-xs text-slate-600">
+            <p>© 2026 Haddon Glen Swim Club | Est. 1961 Seahorses. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -1159,114 +980,66 @@
         // Toggle Mobile Menu
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // Close mobile nav menu on item selections
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
         });
 
-        // Hide mobile menu on link clicks
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Live Pool Status Calculation
+        // Live Pool Status Controls
         function checkPoolStatus() {
-            const now = new Date();
-            const currentHour = now.getHours();
+            const currentHour = new Date().getHours();
             const statusIconBg = document.getElementById('status-icon-bg');
             const statusIcon = document.getElementById('status-icon');
             const statusText = document.getElementById('status-text');
-            const statusHours = document.getElementById('status-hours');
 
-            // Standard Summer Season Hours: 11:00 AM (11) to 8:00 PM (20)
             if (currentHour >= 11 && currentHour < 20) {
-                statusIconBg.className = "w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm transition-all duration-500 bg-brand-blue";
-                statusIcon.className = "fa-solid fa-water-ladder animate-pulse text-brand-sky";
+                statusIconBg.className = "w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm bg-emerald-600";
+                statusIcon.className = "fa-solid fa-water-ladder animate-pulse";
                 statusText.innerText = "Pool is Open!";
-                statusText.className = "text-lg font-bold text-brand-blue";
-            } else if (currentHour >= 20 && currentHour < 21) {
-                statusIconBg.className = "w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm transition-all duration-500 bg-brand-dark";
-                statusIcon.className = "fa-solid fa-moon text-brand-sky";
-                statusText.innerText = "Adult Swim / Evening Lap";
-                statusText.className = "text-lg font-bold text-brand-sky";
+                statusText.className = "text-lg font-bold text-emerald-600";
             } else {
-                statusIconBg.className = "w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm transition-all duration-500 bg-slate-400";
-                statusIcon.className = "fa-solid fa-door-closed text-slate-200";
+                statusIconBg.className = "w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm bg-slate-400";
+                statusIcon.className = "fa-solid fa-door-closed";
                 statusText.innerText = "Pool is Closed";
                 statusText.className = "text-lg font-bold text-slate-500";
             }
         }
-
-        // Initialize status
         checkPoolStatus();
-        // Check periodically
         setInterval(checkPoolStatus, 60000);
 
-        // Filter and Search Quick Links Logic
+        // Sorting & Searching System Data Rules
         function filterLinks(category) {
-            // Update Tab styles
-            const tabs = document.querySelectorAll('.category-tab');
-            tabs.forEach(tab => {
-                tab.className = "category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-dark transition";
+            document.querySelectorAll('.category-tab').forEach(tab => {
+                tab.className = "category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-navy transition";
             });
-
             const activeTab = document.getElementById(`tab-${category}`);
-            if (activeTab) {
-                activeTab.className = "category-tab px-4 py-2 rounded-xl text-sm font-semibold transition bg-brand-blue text-white shadow";
-            }
-
-            // Apply search filter on top
+            if (activeTab) activeTab.className = "category-tab px-4 py-2 rounded-xl text-sm font-semibold transition bg-brand-royal text-white shadow";
             applySearchAndCategory();
         }
 
         const linkSearch = document.getElementById('link-search');
-        linkSearch.addEventListener('input', () => {
-            applySearchAndCategory();
-        });
-
-        function getActiveCategory() {
-            const activeTab = document.querySelector('.category-tab.bg-brand-blue');
-            if (activeTab) {
-                return activeTab.id.replace('tab-', '');
-            }
-            return 'all';
-        }
+        linkSearch.addEventListener('input', applySearchAndCategory);
 
         function applySearchAndCategory() {
             const query = linkSearch.value.toLowerCase().trim();
-            const category = getActiveCategory();
-            const cards = document.querySelectorAll('.link-card');
+            const activeTab = document.querySelector('.category-tab.bg-brand-royal');
+            const category = activeTab ? activeTab.id.replace('tab-', '') : 'all';
             let visibleCount = 0;
 
-            cards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                const cardKeywords = card.getAttribute('data-keywords').toLowerCase();
-                const cardTitle = card.querySelector('h3').innerText.toLowerCase();
-                const cardDesc = card.querySelector('p').innerText.toLowerCase();
+            document.querySelectorAll('.link-card').forEach(card => {
+                const matchesCategory = (category === 'all' || card.getAttribute('data-category') === category);
+                const matchesQuery = !query || card.innerText.toLowerCase().includes(query) || card.getAttribute('data-keywords').includes(query);
 
-                const categoryMatches = (category === 'all' || cardCategory === category);
-                const queryMatches = !query || 
-                                     cardTitle.includes(query) || 
-                                     cardDesc.includes(query) || 
-                                     cardKeywords.includes(query);
-
-                if (categoryMatches && queryMatches) {
+                if (matchesCategory && matchesQuery) {
                     card.classList.remove('hidden');
                     visibleCount++;
                 } else {
                     card.classList.add('hidden');
                 }
             });
-
-            const noResults = document.getElementById('no-results');
-            if (visibleCount === 0) {
-                noResults.classList.remove('hidden');
-            } else {
-                noResults.classList.add('hidden');
-            }
+            document.getElementById('no-results').classList.toggle('hidden', visibleCount > 0);
         }
 
         function resetFilters() {
@@ -1274,9 +1047,8 @@
             filterLinks('all');
         }
 
-        // Interactive Membership Calculator Logic
+        // Structural Cost Matrix Calculator
         let swimmerCount = 1;
-
         function changeSwimmerCount(amount) {
             swimmerCount = Math.max(1, swimmerCount + amount);
             document.getElementById('swimmer-count').innerText = swimmerCount;
@@ -1284,120 +1056,55 @@
         }
 
         function calculateDues() {
-            const familyRadio = document.querySelector('input[name="membership-tier"]:checked');
-            const tier = familyRadio.value;
-            
-            // Adjust label visual styles
-            const familyLabels = ['family', 'couple', 'single', 'senior'];
-            familyLabels.forEach(lbl => {
-                const element = document.getElementById(`lbl-tier-${lbl}`);
-                if (lbl === tier) {
-                    element.className = "relative border-2 border-brand-blue bg-brand-blue/5 rounded-2xl p-4 cursor-pointer transition-all duration-200 block";
-                } else {
-                    element.className = "relative border border-slate-200 rounded-2xl p-4 cursor-pointer hover:border-brand-blue transition-all duration-200 block";
-                }
+            const tier = document.querySelector('input[name="membership-tier"]:checked').value;
+            ['family', 'couple', 'single', 'senior'].forEach(lbl => {
+                document.getElementById(`lbl-tier-${lbl}`).className = (lbl === tier) ? 
+                    "relative border-2 border-brand-royal bg-brand-icebg rounded-2xl p-4 cursor-pointer transition-all duration-200 block" : 
+                    "relative border border-slate-200 rounded-2xl p-4 cursor-pointer hover:border-brand-royal transition-all duration-200 block";
             });
 
-            // Base Dues
-            let baseRate = 575;
-            if (tier === 'couple') baseRate = 450;
-            if (tier === 'single') baseRate = 325;
-            if (tier === 'senior') baseRate = 225;
+            let rates = { family: 575, couple: 450, single: 325, senior: 225 };
+            let total = rates[tier];
 
-            // Extra Upgrades
-            const addBond = document.getElementById('add-bond').checked;
-            const addSwimTeam = document.getElementById('add-swimteam').checked;
-            const swimmerCountDiv = document.getElementById('swimmer-count-div');
-
-            let total = baseRate;
-
-            if (addBond) {
-                total += 200; // One-time refundable bond
-            }
-
-            if (addSwimTeam) {
-                swimmerCountDiv.classList.remove('hidden');
-                total += (swimmerCount * 95); // Swim team rate
+            if (document.getElementById('add-bond').checked) total += 200;
+            if (document.getElementById('add-swimteam').checked) {
+                document.getElementById('swimmer-count-div').classList.remove('hidden');
+                total += (swimmerCount * 95);
             } else {
-                swimmerCountDiv.classList.add('hidden');
+                document.getElementById('swimmer-count-div').classList.add('hidden');
             }
-
-            // Update DOM
             document.getElementById('calculated-total').innerText = `$${total.toFixed(2)}`;
         }
 
-        // Run calculator initial calculation
-        calculateDues();
-
-        // Switch Schedules Tabs
+        // Tab views transitions
         function switchCalendar(tab) {
-            const btns = document.querySelectorAll('.calendar-btn');
-            btns.forEach(btn => {
-                btn.className = "calendar-btn border-b-2 border-transparent text-slate-500 hover:text-slate-800 px-6 py-3 font-bold text-sm transition";
-            });
-
-            const activeBtn = document.getElementById(`btn-cal-${tab}`);
-            if (activeBtn) {
-                activeBtn.className = "calendar-btn border-b-2 border-brand-blue text-brand-blue px-6 py-3 font-bold text-sm transition";
-            }
-
-            const panes = document.querySelectorAll('.calendar-pane');
-            panes.forEach(pane => {
-                pane.classList.add('hidden');
-            });
-
-            const activePane = document.getElementById(`cal-${tab}`);
-            if (activePane) {
-                activePane.classList.remove('hidden');
-                activePane.classList.add('animate-fadeIn');
-            }
+            document.querySelectorAll('.calendar-btn').forEach(btn => btn.className = "calendar-btn border-b-2 border-transparent text-slate-500 hover:text-slate-800 px-6 py-3 font-bold text-sm transition");
+            document.getElementById(`btn-cal-${tab}`).className = "calendar-btn border-b-2 border-brand-royal text-brand-royal px-6 py-3 font-bold text-sm transition";
+            document.querySelectorAll('.calendar-pane').forEach(pane => pane.classList.add('hidden'));
+            document.getElementById(`cal-${tab}`).classList.remove('hidden');
         }
 
-        // Toggle Rules Accordions
         function toggleAccordion(id) {
             const content = document.getElementById(`${id}-content`);
-            const icon = document.getElementById(`${id}-icon`);
-
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.className = "fa-solid fa-chevron-up text-sm text-brand-blue transition-transform duration-200";
-            } else {
-                content.classList.add('hidden');
-                icon.className = "fa-solid fa-chevron-down text-sm text-slate-400 transition-transform duration-200";
-            }
+            content.classList.toggle('hidden');
+            document.getElementById(`${id}-icon`).classList.toggle('fa-chevron-up');
+            document.getElementById(`${id}-icon`).classList.toggle('fa-chevron-down');
         }
 
-        // Handle Form Submission with nice Modal
         function handleFormSubmit(event) {
             event.preventDefault();
-            
-            const name = document.getElementById('form-name').value;
-            const category = document.getElementById('form-category').value;
-            
-            const textEl = document.getElementById('success-msg-text');
-            textEl.innerHTML = `Hi <strong>${name}</strong>, your inquiry regarding <strong>${category}</strong> has been transmitted successfully. The Haddon Glen Board of Trustees will review this and respond to you at your submitted email address shortly. Have a great day!`;
-
+            document.getElementById('success-msg-text').innerHTML = `Hi <strong>${document.getElementById('form-name').value}</strong>, your message regarding <strong>${document.getElementById('form-category').value}</strong> has been received by administration tracking profiles.`;
             openModal('success-modal');
             document.getElementById('contact-form').reset();
         }
 
-        // Modal triggers
-        function openModal(id) {
-            document.getElementById(id).classList.remove('hidden');
-            document.body.classList.add('overflow-hidden');
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).classList.add('hidden');
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        // Mock Apply Link Success
         function openFormDemo() {
-            const textEl = document.getElementById('success-msg-text');
-            textEl.innerHTML = `This links directly to the **Haddon Glen Google Form Membership Application**. In your production Google Site, simply replace the link button with your exact Google Form or payment URL.`;
+            document.getElementById('success-msg-text').innerText = "Direct connection links update automatically upon binding active Google Form asset locations.";
             openModal('success-modal');
         }
+
+        function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+        function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
     </script>
 </body>
 </html>
