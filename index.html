@@ -81,7 +81,6 @@
 
                 <!-- Desktop Nav -->
                 <div class="hidden lg:flex items-center space-x-6">
-                    <a href="#dashboard" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">Facility Status</a>
                     <a href="#quick-links" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">Staff Utilities</a>
                     <a href="#schedule" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">Shifts & Practices</a>
                     <a href="#rules" class="font-medium text-slate-600 hover:text-brand-royal transition duration-150">SOP Checklists</a>
@@ -102,7 +101,6 @@
 
         <!-- Mobile Nav Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3 shadow-inner">
-            <a href="#dashboard" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">Facility Status</a>
             <a href="#quick-links" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">Staff Utilities</a>
             <a href="#schedule" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">Shifts & Practices</a>
             <a href="#rules" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-brand-icebg hover:text-brand-royal font-medium transition">SOP Checklists</a>
@@ -142,52 +140,6 @@
         </div>
     </header>
 
-    <!-- Live Operational Dashboard / Chemical Tracking -->
-    <section id="dashboard" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-10">
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            <!-- Facility State -->
-            <div class="flex items-center gap-4">
-                <div id="status-icon-bg" class="w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm transition-all duration-500 bg-emerald-600">
-                    <i id="status-icon" class="fa-solid fa-water-ladder"></i>
-                </div>
-                <div>
-                    <span class="text-xs text-slate-500 font-bold uppercase tracking-wider block">Pool Deck Status</span>
-                    <div class="flex items-center gap-2">
-                        <span id="status-text" class="text-lg font-bold text-emerald-600">Active Duty</span>
-                        <span class="flex h-2 w-2 relative">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                        </span>
-                    </div>
-                    <span class="text-xs text-slate-500 block font-medium">Standard Shifts: 10:30 AM - 8:30 PM</span>
-                </div>
-            </div>
-
-            <!-- Chemical Log Summary -->
-            <div class="flex items-center gap-4 border-t md:border-t-0 md:border-x border-slate-100 pt-4 md:pt-0 md:px-6">
-                <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-brand-royal text-2xl border border-blue-100 shadow-sm">
-                    <i class="fa-solid fa-flask text-brand-sky"></i>
-                </div>
-                <div>
-                    <span class="text-xs text-slate-500 font-bold uppercase tracking-wider block">Latest Water Parameters</span>
-                    <div class="flex items-center gap-2">
-                        <span class="text-base font-extrabold text-slate-700">CL: 2.4ppm | pH: 7.4</span>
-                        <span class="text-[10px] px-2 py-0.5 bg-emerald-50 border border-emerald-100 text-emerald-600 rounded-md font-bold">BALANCED</span>
-                    </div>
-                    <span class="text-xs text-slate-400 block font-medium">Recorded at: 11:00 AM by On-Duty Guard</span>
-                </div>
-            </div>
-
-            <!-- Internal Staff Notice -->
-            <div class="pt-4 md:pt-0 flex flex-col justify-center">
-                <span class="text-xs text-slate-400 font-bold uppercase tracking-wider block mb-1">Shift Alert Notice</span>
-                <p class="text-sm font-semibold text-brand-navy line-clamp-2">
-                    <i class="fa-solid fa-bullhorn text-brand-sky mr-1.5"></i> All guards must complete safety briefing checklists prior to mounting guard towers.
-                </p>
-            </div>
-        </div>
-    </section>
-
     <!-- Staff Utilities Grid -->
     <section id="quick-links" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-center max-w-3xl mx-auto mb-12">
@@ -197,30 +149,35 @@
             <p class="text-slate-600 font-medium">
                 Find internal portals for processing staff operations, scheduling shifts, recording daily metrics, and checking in coaching layouts.
             </p>
-
-            <!-- Search Field -->
-            <div class="mt-8 relative max-w-xl mx-auto">
-                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
-                    <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
-                </div>
-                <input type="text" id="link-search" placeholder="Search rotas, chemical log, checklists, incident report..." 
-                    class="block w-full pl-10 pr-4 py-3.5 border border-slate-200 rounded-2xl bg-white shadow-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-royal focus:border-transparent text-sm transition-all duration-300">
-            </div>
-
-            <!-- Action Tabs -->
-            <div class="flex flex-wrap justify-center gap-2 mt-6">
-                <button onclick="filterLinks('all')" id="tab-all" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold transition bg-brand-royal text-white shadow">All Utilities</button>
-                <button onclick="filterLinks('shifts')" id="tab-shifts" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-royal transition">Rotas & Schedules</button>
-                <button onclick="filterLinks('logs')" id="tab-logs" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-royal transition">Daily Logs</button>
-                <button onclick="filterLinks('training')" id="tab-training" class="category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-royal transition">Training & SOPs</button>
-            </div>
         </div>
 
         <!-- Cards -->
         <div id="links-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
             
-            <!-- Link Card 1: Lifeguard Shift Rota -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="shifts" data-keywords="shift rota schedule calendar guards lifeguard subitup wheniwork">
+            <!-- Link Card 1: Incident Report Log (Google Apps Script Integration) -->
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-notes-medical"></i>
+                        </div>
+                        <span class="px-2.5 py-1 bg-rose-50 text-rose-700 rounded-full text-xs font-bold uppercase tracking-wider">High Priority</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">Digital Incident Report Log</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-4">
+                        Log any pool deck first-aid treatments, active rescues, member rule disputes, or property maintenance incidents securely.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
+                    <span class="text-xs text-rose-700 font-semibold"><i class="fa-solid fa-file-invoice mr-1"></i> Legal Records</span>
+                    <a href="https://script.google.com/macros/s/AKfycbxw1pnWTGpCH0J6-xYv7tepofE0ctvloNGVQx5DQtcJP--qpIxy60Ww1IulMCPn8klk8A/exec" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                        Log Incident <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Link Card 2: Lifeguard Shift Rota -->
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-royal flex items-center justify-center text-xl">
@@ -241,8 +198,8 @@
                 </div>
             </div>
 
-            <!-- Link Card 2: Chemical & Maintenance Log -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="logs" data-keywords="chemical log chlorine pH water quality pool logs report maintenance">
+            <!-- Link Card 3: Chemical & Maintenance Log -->
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-sky flex items-center justify-center text-xl">
@@ -263,30 +220,8 @@
                 </div>
             </div>
 
-            <!-- Link Card 3: Incident Report Log -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="logs" data-keywords="incident report log injury first aid rescue police safety firstaid">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="w-12 h-12 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center text-xl">
-                            <i class="fa-solid fa-notes-medical"></i>
-                        </div>
-                        <span class="px-2.5 py-1 bg-rose-50 text-rose-700 rounded-full text-xs font-bold uppercase tracking-wider">High Priority</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">Digital Incident Report Log</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed mb-4">
-                        Log any pool deck first-aid treatments, active rescues, member rule disputes, or property maintenance incidents securely.
-                    </p>
-                </div>
-                <div class="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <span class="text-xs text-rose-700 font-semibold"><i class="fa-solid fa-file-invoice mr-1"></i> Legal Records</span>
-                    <button onclick="openFormDemo('Incident Report System')" class="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1.5">
-                        Log Incident <i class="fa-solid fa-file-pen text-[9px]"></i>
-                    </button>
-                </div>
-            </div>
-
             <!-- Link Card 4: Sub Timesheets Portal -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="shifts" data-keywords="pay timesheet hours punch clock staff card pay roll">
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
@@ -308,7 +243,7 @@
             </div>
 
             <!-- Link Card 5: Guard Training Manuals -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="training" data-keywords="lifeguard manual training cpr first aid red cross sop rules standards">
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-12 h-12 rounded-xl bg-slate-50 text-slate-600 flex items-center justify-center text-xl">
@@ -330,7 +265,7 @@
             </div>
 
             <!-- Link Card 6: Front Gate Attendance System -->
-            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between" data-category="shifts" data-keywords="gate checking check-in guest member scanning cards barcode scanner log">
+            <div class="link-card bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl">
@@ -351,18 +286,6 @@
                 </div>
             </div>
 
-        </div>
-
-        <!-- No Results -->
-        <div id="no-results" class="hidden text-center py-12">
-            <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <h3 class="text-lg font-bold text-slate-800 mb-1">No operational files matched</h3>
-            <p class="text-slate-500 text-sm">Verify search inputs or reset filters below.</p>
-            <button onclick="resetFilters()" class="mt-4 px-4 py-2 bg-brand-royal text-white text-xs font-bold rounded-lg hover:bg-brand-navy transition">
-                Reset View
-            </button>
         </div>
     </section>
 
@@ -449,7 +372,7 @@
 
         <!-- Tab 2: Swim Team Practice Schedules -->
         <div id="cal-meets" class="calendar-pane hidden space-y-6">
-            <div class="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden">
+            <div class="bg-white border border-slate-100 rounded-2xl shadow-sm overflow-hidden animate-fadeIn">
                 <table class="w-full text-left text-sm border-collapse font-medium">
                     <thead>
                         <tr class="bg-brand-navy text-white uppercase text-xs tracking-wider">
@@ -693,42 +616,6 @@
         </div>
     </div>
 
-    <!-- Modal 2: Court Operations -->
-    <div id="court-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-100 animate-fadeIn">
-            <div class="p-6 bg-brand-navy text-white flex justify-between items-center">
-                <h3 class="text-lg font-bold"><i class="fa-solid fa-table-tennis-paddle-ball text-brand-sky mr-2"></i> Racket Court Maintenance</h3>
-                <button onclick="closeModal('court-modal')" class="text-white hover:text-brand-sky transition"><i class="fa-solid fa-xmark text-lg"></i></button>
-            </div>
-            <div class="p-6 space-y-4">
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Racket court check-in profiles run via CourtReserve tracking files. Guards must lock courts at 8:30 PM.
-                </p>
-                <button onclick="closeModal('court-modal')" class="block w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-bold text-sm transition">
-                    Return to Portal
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 3: Lessons Logs -->
-    <div id="lessons-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-100 animate-fadeIn">
-            <div class="p-6 bg-brand-navy text-white flex justify-between items-center">
-                <h3 class="text-lg font-bold"><i class="fa-solid fa-children text-brand-sky mr-2"></i> Swim Lessons Assignments</h3>
-                <button onclick="closeModal('lessons-modal')" class="text-white hover:text-brand-sky transition"><i class="fa-solid fa-xmark text-lg"></i></button>
-            </div>
-            <div class="p-6 space-y-4">
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Swim instructors should log student metrics in lesson logs to evaluate level configurations dynamically.
-                </p>
-                <button onclick="closeModal('lessons-modal')" class="block w-full text-center py-3 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-xl font-bold text-sm transition">
-                    Return to Portal
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- Success Modal -->
     <div id="success-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-slate-100 p-6 text-center animate-fadeIn">
@@ -765,7 +652,6 @@
             <div>
                 <h3 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Shift Quicklinks</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#dashboard" class="hover:text-brand-sky transition">Deck Status</a></li>
                     <li><a href="#quick-links" class="hover:text-brand-sky transition">Staff Portals</a></li>
                     <li><a href="#schedule" class="hover:text-brand-sky transition">Shift Logs</a></li>
                 </ul>
@@ -799,78 +685,6 @@
                 mobileMenu.classList.add('hidden');
             });
         });
-
-        // Live Pool Duty Status
-        function checkPoolStatus() {
-            const currentHour = new Date().getHours();
-            const statusIconBg = document.getElementById('status-icon-bg');
-            const statusIcon = document.getElementById('status-icon');
-            const statusText = document.getElementById('status-text');
-
-            if (currentHour >= 11 && currentHour < 21) {
-                statusIconBg.className = "w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm bg-emerald-600";
-                statusIcon.className = "fa-solid fa-water-ladder animate-pulse";
-                statusText.innerText = "Active Duty";
-                statusText.className = "text-lg font-bold text-emerald-600";
-            } else {
-                statusIconBg.className = "w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl shadow-sm bg-slate-400";
-                statusIcon.className = "fa-solid fa-door-closed";
-                statusText.innerText = "Inactive Duty";
-                statusText.className = "text-lg font-bold text-slate-500";
-            }
-        }
-        checkPoolStatus();
-        setInterval(checkPoolStatus, 60000);
-
-        // Filter and Search System Utilities Logic
-        function filterLinks(category) {
-            document.querySelectorAll('.category-tab').forEach(tab => {
-                tab.className = "category-tab px-4 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:bg-slate-100 hover:text-brand-royal transition";
-            });
-
-            const activeTab = document.getElementById(`tab-${category}`);
-            if (activeTab) {
-                activeTab.className = "category-tab px-4 py-2 rounded-xl text-sm font-semibold transition bg-brand-royal text-white shadow";
-            }
-            applySearchAndCategory();
-        }
-
-        const linkSearch = document.getElementById('link-search');
-        linkSearch.addEventListener('input', applySearchAndCategory);
-
-        function applySearchAndCategory() {
-            const query = linkSearch.value.toLowerCase().trim();
-            const activeTab = document.querySelector('.category-tab.bg-brand-royal');
-            const category = activeTab ? activeTab.id.replace('tab-', '') : 'all';
-            let visibleCount = 0;
-
-            document.querySelectorAll('.link-card').forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                const cardKeywords = card.getAttribute('data-keywords').toLowerCase();
-                const cardTitle = card.querySelector('h3').innerText.toLowerCase();
-                const cardDesc = card.querySelector('p').innerText.toLowerCase();
-
-                const categoryMatches = (category === 'all' || cardCategory === category);
-                const queryMatches = !query || 
-                                     cardTitle.includes(query) || 
-                                     cardDesc.includes(query) || 
-                                     cardKeywords.includes(query);
-
-                if (categoryMatches && queryMatches) {
-                    card.classList.remove('hidden');
-                    visibleCount++;
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-
-            document.getElementById('no-results').classList.toggle('hidden', visibleCount > 0);
-        }
-
-        function resetFilters() {
-            linkSearch.value = '';
-            filterLinks('all');
-        }
 
         // Switch Schedules Tabs
         function switchCalendar(tab) {
